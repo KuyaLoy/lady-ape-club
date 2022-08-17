@@ -1,0 +1,122 @@
+@use '../utils' as u;
+
+.navApe {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    padding: u.rem(15) u.rem(20);
+    align-items: center;
+    margin-inline: auto;
+    position: fixed;
+    //margin-bottom: u.rem(-95);
+    width: 100%;
+    transition: top 0.3s;
+    height: u.rem(100);
+    top: 0;
+
+    // @include u.breakpoint-min(medium) {
+    //     display: block;
+    //     padding: 0;
+    //     margin-bottom: unset;
+    // }
+
+    &__logo {
+
+        @include u.breakpoint-min(medium) {
+            position: absolute;
+            top: u.rem(30);
+            left: u.rem(20);
+            width: min(100%, u.rem(1140));
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, 0%);
+            padding: 0 20px;
+        }
+
+        img {
+            width: u.rem(52);
+            object-fit: cover;
+        }
+    }
+
+    &__menu {
+
+        &__burger {
+            float: right;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 24px;
+            cursor: pointer;
+            
+            span {
+                display: flex;
+                border: 1px solid white;
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+
+        }
+
+        @include u.breakpoint-min(medium) {
+            display: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        background-color: white;
+        padding: u.rem(20);
+        margin-top: u.rem(100);
+        display: none;
+
+        @include u.breakpoint-min(medium) {
+            margin-top: 0;
+            background-color: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: u.rem(100);
+        }
+
+        li {
+            text-align: center;
+
+            @include u.breakpoint-min(medium) {
+                margin: 0 u.rem(35);
+                margin-bottom: 0 !important;
+            }
+
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                color: black;
+                font-size: u.rem(14);
+                font-family: "Gilroy-Regular";
+                letter-spacing: u.rem(1.4);
+
+                @include u.breakpoint-min(medium) {
+                    color: white;
+                }
+            }
+            
+            &:not(:last-child) {
+                margin-bottom: u.rem(10);
+            }
+
+        }
+    }
+}

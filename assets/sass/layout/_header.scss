@@ -1,0 +1,89 @@
+@use '../utils' as u;
+
+header {
+    min-height: 100vh;
+    background-image: url(../images/background/heroBG.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: u.rem(20);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    section {
+
+        text-align: center;
+        color: var(--text-color);
+        width: min(100%, u.rem(650));
+        margin-inline: auto;
+
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        @include u.breakpoint-min(medium) {
+            margin-top: 170px;
+            margin-bottom: 300px;
+        }
+
+        article {
+
+            span {
+                font-weight: bold;
+                color: u.$primary-color;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: u.rem(32);
+                font-family: 'Gilroy-Bold';
+                letter-spacing: 3.2px;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: u.rem(32);
+                font-family: "Gilroy-Regular";
+                line-height: u.rem(30);
+                letter-spacing: u.rem(1.8);
+            }
+
+            .button-cont {
+                margin-top: u.rem(107);
+                width: min(100%, u.rem(426));
+                margin-inline: auto;
+                position: relative;
+
+                picture {
+                    
+                    display: none;
+
+                    @include u.breakpoint-min(medium) {
+                        position: absolute;
+                        right: u.rem(-117);
+                        top: u.rem(-50);
+                        width: u.rem(63);
+                        display: block;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                a {
+                    &:not(:last-child) {
+                        margin-bottom: u.rem(15);
+                    }
+                }
+
+            }
+
+        }
+    }
+}

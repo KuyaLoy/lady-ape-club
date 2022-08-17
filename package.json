@@ -1,0 +1,24 @@
+{
+  "name": "my-frontend-structure-normal-nol-gulf",
+  "version": "1.0.0",
+  "description": "bootstrap ready",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuyaLoy/my-frontend-structure-normal-nol-gulf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuyaLoy/my-frontend-structure-normal-nol-gulf/issues"
+  },
+  "homepage": "https://github.com/KuyaLoy/my-frontend-structure-normal-nol-gulf#readme",
+  "dependencies": {
+    "bootstrap": "5.2",
+    "jquery": "^3.6.0"
+  }
+}

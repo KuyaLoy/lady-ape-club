@@ -1,0 +1,19 @@
+@use '../utils' as u;
+
+:root {
+	--background-color: hsl(0, 0%, 0%);;
+	--text-color: hsl(0, 0%, 100%);
+}
+
+.primary-color-bg {
+	background-color: u.$primary-color;
+}
+.primary-color-text {
+	color: u.$primary-color;
+}
+.secondary-color-bg {
+	background-color: u.$secondary-color;
+}
+.secondary-color-text {
+	color: u.$secondary-color;
+}
