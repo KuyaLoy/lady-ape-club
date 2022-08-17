@@ -1,0 +1,115 @@
+@use '../utils' as u;
+
+main {
+    section {
+        article {
+            margin-top: u.rem(75);
+            margin-bottom: u.rem(75); 
+
+            &.lac-sec-1 {
+                h2 {
+                    margin-bottom: u.rem(20)
+                }
+                
+                .sec-inner {
+
+                    .sec-cont {
+
+                        margin-bottom: u.rem(40);
+
+                        &:nth-child(2),
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        @include u.breakpoint-min(medium) {
+                            margin-bottom: 0;
+                        }
+                        
+                        picture {
+                            background: hsla(44, 100%, 68%, 0.15);
+                            height: u.rem(60);
+                            width: u.rem(60);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+                            border-radius: 100%;
+
+                            @include u.breakpoint-min(medium) {
+                                height: u.rem(90);
+                                width: u.rem(90);
+                            }
+                            
+                            img {
+                                width: u.rem(30);
+                                object-fit: cover;
+                            }
+                        }
+                        p {
+                            text-align: center;
+                            font-size: u.rem(32);
+                            font-family: "Gilroy-Regular";
+                            font-weight: lighter;
+                            position: relative;
+                            margin-top: u.rem(10);
+                            margin-bottom: 0;
+
+                            @include u.breakpoint-min(medium) {
+                                font-size: u.rem(75);
+                            }
+
+                            sup {
+                                color: hsl(0, 0%, 58%);
+                                font-size: u.rem(12);
+                                top: u.rem(-10);
+                                right: u.rem(-10);
+
+                                @include u.breakpoint-min(medium) {
+                                    font-size: u.rem(18);
+                                    top: u.rem(-35);
+                                    right: u.rem(-10);
+                                }
+                            }
+
+                            span {
+
+
+                                &.rank {
+
+                                    display: none;
+
+                                    @include u.breakpoint-min(medium) {
+                                        background-color: rgba(51,255,78,.2);
+                                        border-radius: u.rem(6);
+                                        color: hsl(128, 100%, 60%);
+                                        font-size: 0.75rem;
+                                        padding: u.rem(3);
+                                        position: absolute;
+                                        top: calc(50% - u.rem(10));
+                                        right: u.rem(-10);
+                                        font-family: "Gilroy-Regular";
+                                    }
+                                }
+                            }
+                        }
+                        &>span {
+                            text-align: center;
+                            color: hsl(0, 0%, 70%);
+                            font-family: "Gilroy-Regular";
+                            font-size: u.rem(14);
+                            letter-spacing: u.rem(1.4);
+                            display: block;
+                            margin-top: u.rem(10);
+
+                            @include u.breakpoint-min(medium) {
+                                letter-spacing: u.rem(1.8);
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

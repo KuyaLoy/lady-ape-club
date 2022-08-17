@@ -9,14 +9,20 @@
     text-transform: uppercase;
     background: none;
     text-decoration: none;
-
+    height: u.rem(55);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: u.rem(70);
+    
 
     font-family: "Gilroy-Bold";
-    letter-spacing: u.rem(1.8);
+    letter-spacing: u.rem(1.6);
+    font-size: u.rem(16);
+
+    @include u.breakpoint-min(medium) {
+        height: u.rem(70);
+        letter-spacing: u.rem(1.8);
+    }
 }
 .primary-lac-btn {
     color: u.$black-plain;

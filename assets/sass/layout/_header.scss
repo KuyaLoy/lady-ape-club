@@ -12,6 +12,8 @@ header {
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     section {
 
         text-align: center;
@@ -39,17 +41,29 @@ header {
             }
 
             h1 {
-                font-size: u.rem(32);
+                font-size: u.rem(26);
                 font-family: 'Gilroy-Bold';
-                letter-spacing: 3.2px;
+                letter-spacing: u.rem(2.6);
                 font-weight: bold;
+                
+                @include u.breakpoint-min(medium) {
+                    font-size: u.rem(32);
+                    letter-spacing: u.rem(3.2);
+                }
             }
 
             p {
                 margin-top: u.rem(32);
                 font-family: "Gilroy-Regular";
                 line-height: u.rem(30);
-                letter-spacing: u.rem(1.8);
+                letter-spacing: u.rem(1.6);
+                font-size: u.rem(16);
+
+
+                @include u.breakpoint-min(medium) {
+                    letter-spacing: u.rem(1.8);
+                    font-size: u.rem(18);
+                }
             }
 
             .button-cont {
@@ -86,4 +100,33 @@ header {
 
         }
     }
+
+    // .hero-ape-bg {
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    //     height: u.rem(582);
+    //     position: absolute;
+    //     width: u.rem(400);
+    //     bottom: 0;
+    // }
+    // .hero-lac-1 {
+    //     background-image: url(../images/hero/lac-1.png);
+    //     left: 0;
+
+    // }
+    // .hero-lac-2 {
+    //     background-image: url(../images/hero/lac-2.png);
+       
+
+    // }
+    // .hero-lac-3 {
+    //     background-image: url(../images/hero/lac-3.png);
+       
+
+    // }
+    // .hero-lac-4 {
+    //     background-image: url(../images/hero/lac-4.png);
+    //    right: 0;
+    // }
 }

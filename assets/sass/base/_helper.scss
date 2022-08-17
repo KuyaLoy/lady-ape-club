@@ -1,0 +1,30 @@
+@use '../utils' as u;
+
+.sec-title {
+    font-size: u.rem(26);
+    margin-bottom: u.rem(90);
+    letter-spacing: u.rem(2.6);
+    text-align: center;
+
+    @include u.breakpoint-min(medium) {
+        font-size: u.rem(32);
+        letter-spacing: u.rem(3.2);
+    }
+}
+.sec-desc {
+    width: min(100%, u.rem(650));
+    margin-inline: auto;
+    margin-bottom: u.rem(80);
+    letter-spacing: u.rem(1.4);
+    font-size: u.rem(14);
+    text-align: center;
+
+    @include u.breakpoint-min(medium) {
+        letter-spacing: u.rem(1.8);
+        font-size: u.rem(18);
+    }
+
+    span {
+        color: u.$primary-color;
+    }
+}

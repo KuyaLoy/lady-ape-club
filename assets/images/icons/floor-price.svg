@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="Group_130" data-name="Group 130" transform="translate(1 0.35)">
+    <rect id="Rectangle_5299" data-name="Rectangle 5299" width="45" height="45" transform="translate(-1 -0.35)" fill="none"/>
+    <g id="Group_129" data-name="Group 129" transform="translate(8.159 6.65)">
+      <path id="Path_30269" data-name="Path 30269" d="M34.63,21.393c0,5.764-3.294,8.235-8.235,8.235H9.945a10.944,10.944,0,0,1-2.4-.243,7.277,7.277,0,0,1-1.329-.356c-2.807-1.048-4.51-3.481-4.51-7.636V11.755C1.71,5.99,5,3.52,9.945,3.52H26.4c4.192,0,7.205,1.778,8.01,5.839a13.535,13.535,0,0,1,.225,2.4Z" transform="translate(-1.71 -3.52)" fill="none" stroke="#ffd45e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_30270" data-name="Path 30270" d="M4.831,24.288c0,5.764,3.294,8.235,8.235,8.235H29.516a10.51,10.51,0,0,0,3.724-.6,6.568,6.568,0,0,0,4.286-5.259,10.944,10.944,0,0,1-2.4.243H18.68c-4.941,0-8.235-2.47-8.235-8.235V9.036a11.844,11.844,0,0,1,.225-2.4C7.114,7.389,4.831,9.9,4.831,14.65Z" transform="translate(-10.99 -0.801)" fill="none" stroke="#ffd45e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_30271" data-name="Path 30271" d="M12.8,17.741A4.941,4.941,0,1,1,17.74,12.8,4.941,4.941,0,0,1,12.8,17.741Z" transform="translate(3.648 0.262)" fill="none" stroke="#ffd45e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+      <path id="Path_30272" data-name="Path 30272" d="M4.78,8.3v8.235" transform="translate(0.966 0.646)" fill="none" stroke="#ffd45e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_30273" data-name="Path 30273" d="M16.222,8.3v8.235" transform="translate(10.937 0.646)" fill="none" stroke="#ffd45e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

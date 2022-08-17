@@ -16,6 +16,7 @@
     transition: top 0.3s;
     height: u.rem(100);
     top: 0;
+    z-index: 1;
 
     // @include u.breakpoint-min(medium) {
     //     display: block;
