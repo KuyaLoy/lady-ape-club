@@ -1,0 +1,112 @@
+<style>
+    .container {
+        width: min(100%, 1140px);
+    }
+
+    .container ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        row-gap: 50px;
+        padding: 0;
+        margin: 0;
+    }
+    .container ul li {
+        background: red;
+        height: 350px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    @media (min-width: 900px) {
+        .container ul {
+            position: relative;
+        }
+        .container ul li {
+            width: 230px;
+            height: 210px;
+        }
+        li.div-1 {
+            margin-left: 135px;
+        }
+        li.div-2 {
+            margin-right: 135px;
+        }
+        li.div-3 {
+            position: absolute;
+            top: 105px;
+            left: 20px;
+        }
+        li.div-4 {
+            position: absolute;
+            top: 105px;
+        }
+        li.div-5 {
+            position: absolute;
+            top: 105px;
+            right: 20px;
+        }
+        li.div-6 {
+            margin-left: 135px;
+    margin-top: -50px;
+}
+li.div-7 {
+            margin-right: 135px;
+    margin-top: -50px;
+}
+    }
+    li.div-8 {
+        position: absolute;
+        top: 315px;
+        left: 20px;
+    }
+    li.div-8 {
+        position: absolute;
+        top: 315px;
+        left: 20px;
+    }
+    li.div-9 {
+        position: absolute;
+            top: 315px;
+    }
+    li.div-10 {
+        position: absolute;
+        top: 315px;
+            right: 20px;
+    }
+    li.div-11 {
+    position: absolute;
+    left: 194px;
+    top: 420px;
+    background-color: red;
+}
+li.div-12 {
+    position: absolute;
+    right: 194px;
+    top: 420px;
+    background-color: red;
+}
+    @media (min-width: 1440px) {
+        
+    }
+</style>
+
+<div class="container">
+    <ul>
+        <li class="div-1"><h1>hello</h1></li>
+        <li class="div-2"><h1>hello</h1></li>
+        <li class="div-3"><h1>hello</h1></li>
+        <li class="div-4"><h1>hello</h1></li>
+        <li class="div-5"><h1>hello</h1></li>
+        <li class="div-6"><h1>hello</h1></li>
+        <li class="div-7"><h1>hello</h1></li>
+        <li class="div-8"><h1>hello</h1></li>
+        <li class="div-9"><h1>hello</h1></li>
+        <li class="div-10"><h1>hello</h1></li>
+        <li class="div-11"><h1>hello</h1></li>
+        <li class="div-12"><h1>hello</h1></li>
+    </ul>
+</div>
