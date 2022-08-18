@@ -18,11 +18,12 @@ header {
 
         text-align: center;
         color: var(--text-color);
-        width: min(100%, u.rem(650));
+        width: min(100%, u.rem(750));
         margin-inline: auto;
 
         margin-top: 100px;
         margin-bottom: 100px;
+        z-index: 1;
 
         @include u.breakpoint-min(medium) {
             margin-top: 170px;
@@ -31,18 +32,13 @@ header {
 
         article {
 
-            span {
-                font-weight: bold;
-                color: u.$primary-color;
-            }
-
             img {
                 width: 100%;
             }
 
             h1 {
                 font-size: u.rem(26);
-                font-family: 'Gilroy-Bold';
+                font-family: 'Gilroy-Black';
                 letter-spacing: u.rem(2.6);
                 font-weight: bold;
                 
@@ -63,6 +59,11 @@ header {
                 @include u.breakpoint-min(medium) {
                     letter-spacing: u.rem(1.8);
                     font-size: u.rem(18);
+                }
+                
+                span {
+                    font-family: "Gilroy-Bold";
+                    color: u.$primary-color;
                 }
             }
 
@@ -100,33 +101,28 @@ header {
 
         }
     }
+    
 
-    // .hero-ape-bg {
-    //     background-position: center center;
-    //     background-repeat: no-repeat;
-    //     background-size: contain;
-    //     height: u.rem(582);
-    //     position: absolute;
-    //     width: u.rem(400);
-    //     bottom: 0;
-    // }
-    // .hero-lac-1 {
-    //     background-image: url(../images/hero/lac-1.png);
-    //     left: 0;
+    .hero-ape-bg {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../images/hero/lac-group.png);
+        display: none;
+        z-index: 0;
+        
+        @include u.breakpoint-min(large) {
+            display: block;
+        }
+        @include u.breakpoint-min(xlarge) {
+            height: 60vh;
+        }
 
-    // }
-    // .hero-lac-2 {
-    //     background-image: url(../images/hero/lac-2.png);
-       
-
-    // }
-    // .hero-lac-3 {
-    //     background-image: url(../images/hero/lac-3.png);
-       
-
-    // }
-    // .hero-lac-4 {
-    //     background-image: url(../images/hero/lac-4.png);
-    //    right: 0;
-    // }
+        @media (min-width: 2300px) {
+            height: 60vh;
+        }
+    }
 }

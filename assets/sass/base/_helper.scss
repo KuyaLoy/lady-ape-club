@@ -5,6 +5,7 @@
     margin-bottom: u.rem(90);
     letter-spacing: u.rem(2.6);
     text-align: center;
+    font-family: "Gilroy-Black";
 
     @include u.breakpoint-min(medium) {
         font-size: u.rem(32);
@@ -18,6 +19,7 @@
     letter-spacing: u.rem(1.4);
     font-size: u.rem(14);
     text-align: center;
+    font-family: "Gilroy-Regular";
 
     @include u.breakpoint-min(medium) {
         letter-spacing: u.rem(1.8);
@@ -26,5 +28,19 @@
 
     span {
         color: u.$primary-color;
+        font-family: "Gilroy-Bold";
     }
+}
+
+.gilroy-light {
+    font-family: "Gilroy-Light";
+}
+.gilroy-regular {
+    font-family: "Gilroy-Regular";
+}
+.gilroy-bold {
+    font-family: "Gilroy-Bold";
+}
+.gilroy-black {
+    font-family: "Gilroy-black";
 }

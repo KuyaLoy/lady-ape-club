@@ -1,0 +1,65 @@
+@use '../utils' as u;
+
+footer {
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    picture {
+        width: u.rem(120);
+        height: u.rem(120);
+
+        img {
+            width: 100%;
+            object-fit: contain; 
+        }
+    }
+
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: u.rem(38);
+        
+        a {
+            display: block;
+            height: u.rem(40);
+            width: u.rem(40);
+            margin: 0 u.rem(10);
+            border-radius: u.rem(50);
+            text-decoration: none;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &.facebook {
+                background-image: url(../images/icons/social-icon/white-with-white-border/facebook.svg);
+            }
+            &.twitter {
+                background-image: url(../images/icons/social-icon/white-with-white-border/twitter.svg);
+            }
+            &.youtube {
+                background-image: url(../images/icons/social-icon/white-with-white-border/youtube.svg);
+            }
+            &.discord {
+                background-image: url(../images/icons/social-icon/white-with-white-border/discord.svg);
+            }
+            &.telegram {
+                background-image: url(../images/icons/social-icon/white-with-white-border/telegram.svg);
+            }
+        }
+    }
+    .copyright {
+        font-family: u.rem(14);
+        letter-spacing: u.rem(1.4);
+        color: u.$white-plain;
+        margin-top: u.rem(30);
+        a {
+            text-decoration: none;
+            color: u.$white-plain;
+        }
+    }
+}

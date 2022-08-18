@@ -11,22 +11,15 @@
     align-items: center;
     margin-inline: auto;
     position: fixed;
-    //margin-bottom: u.rem(-95);
     width: 100%;
     transition: top 0.3s;
     height: u.rem(100);
     top: 0;
-    z-index: 1;
-
-    // @include u.breakpoint-min(medium) {
-    //     display: block;
-    //     padding: 0;
-    //     margin-bottom: unset;
-    // }
+    z-index: 2;
 
     &__logo {
 
-        @include u.breakpoint-min(medium) {
+        @include u.breakpoint-min(large) {
             position: absolute;
             top: u.rem(30);
             left: u.rem(20);
@@ -66,7 +59,7 @@
 
         }
 
-        @include u.breakpoint-min(medium) {
+        @include u.breakpoint-min(large) {
             display: none;
         }
     }
@@ -79,15 +72,37 @@
         width: 100%;
         top: 0;
         right: 0;
-        background-color: white;
         padding: u.rem(20);
-        margin-top: u.rem(100);
         display: none;
 
-        @include u.breakpoint-min(medium) {
+        &.open {
+            top: 0; right: 0; left: 0; bottom: 0;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.19);
+            backdrop-filter: blur(u.rem(16));
+            z-index: 9999999999999;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            
+            li {
+                width: 100%;
+
+                a {
+                    color: white;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: u.rem(40);
+                }
+            }
+        }
+
+        @include u.breakpoint-min(large) {
             margin-top: 0;
             background-color: unset;
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
             height: u.rem(100);
@@ -98,24 +113,15 @@
 
             @include u.breakpoint-min(medium) {
                 margin: 0 u.rem(35);
-                margin-bottom: 0 !important;
             }
 
             a {
                 text-decoration: none;
                 text-transform: capitalize;
-                color: black;
+                color: white;
                 font-size: u.rem(14);
                 font-family: "Gilroy-Regular";
                 letter-spacing: u.rem(1.4);
-
-                @include u.breakpoint-min(medium) {
-                    color: white;
-                }
-            }
-            
-            &:not(:last-child) {
-                margin-bottom: u.rem(10);
             }
 
         }

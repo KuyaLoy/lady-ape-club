@@ -18,7 +18,7 @@ window.onscroll = function() {
   if (currentScrollPos > prevScrollpos) {
     if(currentScrollPos > minTop) {
       $(".navApe").css( {
-        "top":"-100px"
+        "top":"-110px"
       }); 
     } 
   } else {
@@ -41,9 +41,9 @@ window.onscroll = function() {
 };
 
 // show list of monkey
-var allPics = 40;
+var allPics = 39;
 
-for(i=1;i<=allPics; i++){
+for(i=0;i<=allPics; i++){
   // myImg.src = images[i];
 
   // TODO: adjust this to whatever you want
@@ -55,8 +55,8 @@ for(i=1;i<=allPics; i++){
   img.src = './assets/images/lac-nft/'+[i]+'.png';
   picture.appendChild(img);
 
-  if(i > 20) {
-    document.getElementById('slide-lac-cont-2').appendChild(picture);
+  if(i > 19) {
+    document.getElementById('slide-lac-cont-2').appendChild(picture); 
   } else {
     document.getElementById('slide-lac-cont-1').appendChild(picture);
   }
