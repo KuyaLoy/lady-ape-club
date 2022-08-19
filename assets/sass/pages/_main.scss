@@ -1,0 +1,191 @@
+@use '../utils' as u;
+
+.container-main-index {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .main {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-bottom: 1px solid #fff;
+
+        .main_bg {
+            max-width: 1200px;
+            height: 930px;
+            margin: 0 auto;
+            background: url(../images/index/background.jpg) no-repeat top center;
+            background-size: contain;
+            opacity: 0.4;
+        }
+        .title_neon {
+            position: absolute;
+            top: 40px;
+            left: 51%;
+            transform: translate(-50%, 0);
+            max-width: 1200px;
+            transition: .3s ease-in-out;
+            opacity: 1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 180px;
+                transition: .3s ease-in-out;
+                opacity: 1;
+
+                &:nth-child(1) {
+                    opacity: 1;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+            
+            &.on {
+
+                img {
+                    &:nth-child(1) {
+                        opacity: 0;
+                    }
+                    &:nth-child(2) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .mobile_title_neon {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 51%;
+            transform: translate(-50%, 0);
+            max-width: 1200px;
+            transition: .3s ease-in-out;
+            opacity: 1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 180px;
+                transition: .3s ease-in-out;
+                opacity: 1;
+
+            }
+        }
+        .neon {
+            position: absolute;
+            top: 160px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            max-width: 1200px;
+            transition: .3s ease-in-out;
+            opacity: 1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 870px;
+                transition: .3s ease-in-out;
+                opacity: 1;
+
+                &:nth-child(1) {
+                    opacity: 1;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+            &.on {
+
+                img {
+                    &:nth-child(1) {
+                        opacity: 0;
+                    }
+                    &:nth-child(2) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .mobile_neon {
+            display: none;
+            position: absolute;
+            top: 160px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            max-width: 1200px;
+            transition: .3s ease-in-out;
+            opacity: 1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 870px;
+                transition: .3s ease-in-out;
+                opacity: 1;
+            }
+        }
+        .door {
+            position: absolute;
+            top: 225px;
+            left: 51%;
+            transform: translate(-50%, 0);
+            width: 500px;
+            opacity: 1;
+            transition: .3s ease-in-out;
+            a {
+                display: block;
+            }
+
+            &.on {
+                top: 228px;
+                opacity: 0;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .smoke {
+            position: absolute;
+            bottom: 0;
+        }
+        .bottom_img {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            bottom: 0;
+            width: 1000px;
+            .monkey {
+                position: absolute;
+                bottom: -4px;
+                left: 158px;
+                z-index: 1;
+                img {
+                    width: 300px;
+                }   
+            }
+        }
+        .desc {
+            position: absolute;
+            bottom: 55px;
+            left: 500px;
+            color: #fff;
+            z-index: 2;
+            p {
+                font-family: 'Jandamana-soild';
+                line-height: 3.2rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}

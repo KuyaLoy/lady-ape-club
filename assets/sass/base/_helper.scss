@@ -1,5 +1,9 @@
 @use '../utils' as u;
 
+.overflow-hidder {
+    overflow: hidden;
+}
+
 .sec-title {
     font-size: u.rem(26);
     margin-bottom: u.rem(90);

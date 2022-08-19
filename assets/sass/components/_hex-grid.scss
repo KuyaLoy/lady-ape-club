@@ -1,124 +1,367 @@
-$block: '.hex-grid';
+@use '../utils' as u;
 
-@mixin grid-item($amount) {
-    @for $i from 1 through $amount {
-        &:nth-of-type(#{$amount}n + #{$i}) {
-            grid-column: #{$i + $i - 1} / span 3;
-            @if $i % 2 == 0 {
-                grid-row: calc(var(--counter) + var(--counter) - 1) / span 2;
+.hex-cont {
+
+    width: min(100%, 1140px);
+    margin-inline: auto;
+    padding: 0 20px;
+
+    ul {
+        position: relative;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+
+        @include u.breakpoint-max(small) {
+            grid-template-rows: repeat(6, 1fr);
+        }
+        @media (max-width: 500px) {
+            gap: 20px;
+        }
+        @media (max-width: 420px) {
+            gap: 10px;
+        }
+
+        li {
+            //background-color:hsl(226, 28%, 79%) ;
+            height: 265px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            transition: all .2s ease-out;
+            cursor: pointer;
+            text-align: center;
+            padding: 20px;
+
+            position: relative;
+
+            background-size: 95%;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: hsla(0, 0%, 0%, 0.50);
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                transition: 500ms;
+            }
+
+            &:hover {
+
+                // transform: scale(1.1);
+                // z-index: 1;
+
+                &::before {
+                    background: none;
+                }
+            }
+
+            P {
+                font-family: "Gilroy-Regular";
+                letter-spacing: u.rem(1.8);
+                z-index: 1;
+                padding: 0;
+                margin: 0;
+
+                @include u.breakpoint-max(small) {
+                    letter-spacing: u.rem(1.4);
+                    font-size: u.rem(12);
+                }
+            }
+
+
+            @media (max-width: 570px) {
+                height: 200px;
+            }
+            
+            @media (max-width: 500px) {
+                height: 155px;
+            }
+            
+            /* right: unset; left: unset; bottom: unset; top: unset;
+            margin-right: unset; margin-left: unset; margin-bottom: unset; margin-top: unset;
+            position: unset; */
+            @include u.breakpoint-min(medium) {
+                width: 180px;
+                height: 150px;
+
+                &.div-1 {
+                    margin-left: 95px;
+                }
+            
+                &.div-2 {
+                    margin-right: 95px;
+                }
+            
+                &.div-3 {
+                    position: absolute;
+                    top: 80px;
+                    left: -10px;
+                }
+            
+                &.div-4 {
+                    position: absolute;
+                    top: 80px;
+                }
+            
+                &.div-5 {
+                    position: absolute;
+                    top: 80px;
+                    right: -10px;
+                }
+            
+                &.div-6 {
+                    margin-left: 95px;
+                    margin-top: -20px;
+                }
+            
+                &.div-7 {
+                    margin-right: 95px;
+                    margin-top: -20px;
+                }
+            
+                &.div-8 {
+                    position: absolute;
+                    top: 240px;
+                    left: -10px;
+                }
+            
+                &.div-9 {
+                    position: absolute;
+                    top: 240px;
+                }
+            
+                &.div-10 {
+                    position: absolute;
+                    top: 240px;
+                    right: -10px;
+                }
+            
+                &.div-11 {
+                    margin-left: 95px;
+                    margin-top: -20px;
+                }
+            
+                &.div-12 {
+                    margin-right: 95px;
+                    margin-top: -20px;
+            
+                }
+            }
+            @media (min-width: 1000px) {
+                width: 230px;
+                height: 200px;
+
+                &.div-1 {
+                    margin-left: 135px;
+                }
+            
+                &.div-2 {
+                    margin-right: 135px;
+                }
+            
+                &.div-3 {
+                    position: absolute;
+                    top: 105px;
+                    left: 5px;
+                }
+            
+                &.div-4 {
+                    position: absolute;
+                    top: 105px;
+                }
+            
+                &.div-5 {
+                    position: absolute;
+                    top: 105px;
+                    right: 5px;
+                }
+            
+                &.div-6 {
+                    margin-left: 135px;
+                    margin-top: -20px;
+                }
+            
+                &.div-7 {
+                    margin-right: 135px;
+                    margin-top: -20px;
+                }
+            
+                &.div-8 {
+                    position: absolute;
+                    top: 315px;
+                    left: 5px;
+                }
+            
+                &.div-9 {
+                    position: absolute;
+                    top: 315px;
+                }
+            
+                &.div-10 {
+                    position: absolute;
+                    top: 315px;
+                    right: 5px;
+                }
+            
+                &.div-11 {
+                    margin-left: 135px;
+                    margin-top: -20px;
+                }
+            
+                &.div-12 {
+                    margin-right: 135px;
+                    margin-top: -20px;
+            
+                }
+            }
+            @media (min-width: 1200px) {
+                width: 230px;
+                height: 200px;
+
+                &.div-1 {
+                    margin-left: 180px;
+                }
+            
+                &.div-2 {
+                    margin-right: 180px;
+                }
+            
+                &.div-3 {
+                    position: absolute;
+                    top: 105px;
+                    left: 50px;
+                }
+            
+                &.div-4 {
+                    position: absolute;
+                    top: 105px;
+                }
+            
+                &.div-5 {
+                    position: absolute;
+                    top: 105px;
+                    right: 50px;
+                }
+            
+                &.div-6 {
+                    margin-left: 180px;
+                    margin-top: -10px;
+                }
+            
+                &.div-7 {
+                    margin-right: 180px;
+                    margin-top: -10px;
+                }
+            
+                &.div-8 {
+                    position: absolute;
+                    top: 320px;
+                    left: 50px;
+                }
+            
+                &.div-9 {
+                    position: absolute;
+                    top: 320px;
+                }
+            
+                &.div-10 {
+                    position: absolute;
+                    top: 320px;
+                    right: 50px;
+                }
+            
+                &.div-11 {
+                    margin-left: 180px;
+                    margin-top: -15px;
+                }
+            
+                &.div-12 {
+                    margin-right: 180px;
+                    margin-top: -15px;
+            
+                }
+            }
+            @include u.breakpoint-min(xlarge) {
+                width: 270px;
+                height: 240px;
+
+                &.div-1 {
+                    margin-left: 135px;
+                }
+            
+                &.div-2 {
+                    margin-right: 135px;
+                }
+            
+                &.div-3 {
+                    position: absolute;
+                    top: 125px;
+                    left: -15px;
+                }
+            
+                &.div-4 {
+                    position: absolute;
+                    top: 125px;
+                }
+            
+                &.div-5 {
+                    position: absolute;
+                    top: 125px;
+                    right: -15px;
+                }
+            
+                &.div-6 {
+                    margin-left: 135px;
+                    margin-top: -20px;
+                }
+            
+                &.div-7 {
+                    margin-right: 135px;
+                    margin-top: -20px;
+                }
+            
+                &.div-8 {
+                    position: absolute;
+                    top: 375px;
+                    left: -15px;
+                }
+            
+                &.div-9 {
+                    position: absolute;
+                    top: 375px;
+                }
+            
+                &.div-10 {
+                    position: absolute;
+                    top: 375px;
+                    right: -15px;
+                }
+            
+                &.div-11 {
+                    margin-left: 135px;
+                    margin-top: -20px;
+                }
+            
+                &.div-12 {
+                    margin-right: 135px;
+                    margin-top: -20px;
+            
+                }
             }
         }
     }
 
-    @for $i from 1 through 20 {
-        &:nth-of-type(n + #{$i * $amount + 1}) {
-            --counter: #{$i + 1};
-        }
-    }
-}
-
-#{$block} {
-    display: flex;
-	justify-content: center;
-
-    &__list {
-        --amount: 5;
-        position: relative;
-        padding: 0;
-		margin: 0;
-		list-style-type: none;
-		display: grid;
-        grid-template-columns: repeat(var(--amount), 1fr 2fr) 1fr;
-		grid-gap: 2.5rem 5rem;
-    }
-
-    &__item {
-        position: relative;
-		grid-column: 1 / span 3;
-		grid-row: calc(var(--counter) + var(--counter)) / span 2;
-		filter: drop-shadow(0 0 10px rgba(#444, .08));
-		height: 0;
-		padding-bottom: 90%;
-    }
-
-    &__content {
-        position: absolute;
-		height: 100%;
-		width: 100%;
-		font-size: 1.125rem;
-		color: #111111;
-		background-color: white;
-		clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 2rem 25%;
-		text-decoration: none;
-		text-align: center;
-		transition: transform .24s ease-out;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-	#{$block} {
-		&__list {
-            --amount: 5;
-			--counter: 1;
-		}
-
-		&__item {
-			@include grid-item(5);
-		}
-	}
-}
-
-@media screen and (min-width: 1120px) and (max-width: 1439px) {
-	#{$block} {
-		&__list {
-            --amount: 4;
-			--counter: 1;
-		}
-
-		&__item {
-			@include grid-item(4);
-		}
-	}
-}
-
-@media screen and (min-width: 840px) and (max-width: 1119px) {
-	#{$block} {
-		&__list {
-            --amount: 3;
-			--counter: 1;
-			grid-gap: 1.5rem 3rem;
-		}
-
-		&__item {
-			@include grid-item(3);
-		}
-	}
-}
-
-@media screen and (min-width: 480px) and (max-width: 839px) {
-	#{$block} {
-		&__list {
-			--amount: 2;
-			--counter: 1;
-			grid-gap: 1.5rem 3rem;
-		}
-
-		&__item {
-			@include grid-item(2);
-		}
-	}
-}
-
-@media screen and (max-width: 479px) {
-	#{$block} {
-		&__list {
-            --amount: 1;
-			grid-gap: 1.5rem 3rem;
-		}
-	}
 }
