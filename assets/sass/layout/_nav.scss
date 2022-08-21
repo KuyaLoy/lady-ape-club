@@ -186,7 +186,24 @@
                 }
             }
 
-            @include u.breakpoint-min(medium) {
+            .close-menu {
+                display: block;
+
+                position: absolute;
+                top: u.rem(45);
+                right: u.rem(20);
+                height: u.rem(24);
+                width: u.rem(24);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @include u.breakpoint-min(large) {
+                    display: none;
+                }
+            }
+
+            @include u.breakpoint-min(large) {
                 display: flex;
             }
 
@@ -267,7 +284,7 @@
                 object-fit: contain;
             }
 
-            @include u.breakpoint-min(medium) {
+            @include u.breakpoint-min(large) {
                 right: 0;
             }
             

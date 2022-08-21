@@ -4,6 +4,7 @@ html {
     box-sizing: border-box;
     font-size: 100%;
     font-size: u.rem(18);
+    scroll-behavior: smooth;
 }
 
 *,
@@ -17,4 +18,9 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+article, header {
+    scroll-margin-top: u.rem(140);
 }

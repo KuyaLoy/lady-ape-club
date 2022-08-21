@@ -39,7 +39,7 @@
 		content="Lady Ape Club (LAC) is a collection of 10,000 unique and fabulous ape-inspired NFTs. We offer exclusive benefits and special deals to Lady Ape NFT holders." />
 </head>
 
-<body>
+<body id="LAC-Home">
 	<header>
 		<nav class="navApe">
 			<div class="navApe__cont">
@@ -49,11 +49,16 @@
 					</a>
 				</picture>
 				<ul class="navApe__cont__list">
-					<li class="navApe__cont__list__item"><a href="#!">Buy Lady Ape</a></li>
-					<li class="navApe__cont__list__item"><a href="#!">Team</a></li>
-					<li class="navApe__cont__list__item"><a href="#!">Roadmap</a></li>
-					<li class="navApe__cont__list__item"><a href="#!">Gallery</a></li>
-					<li class="navApe__cont__list__item"><a href="#!">Members</a></li>
+					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Home">Buy Lady Ape</a></li>
+					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Team">Team</a></li>
+					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Roadmap">Roadmap</a></li>
+					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Gallery</a></li>
+					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Members</a></li>
+					<span class="close-menu" onclick="menuToggle()">
+						<picture>
+							<img src="./assets/images/icons/white-close.svg" alt="close">
+						</picture>
+					</span>
 				</ul>
 				<div class="navApe__cont__menu">
 					<div class="navApe__cont__menu__burger" onclick="menuToggle()">
@@ -64,19 +69,20 @@
 				</div>
 				<div class="navApe__cont__sound">
 					<span href="" onclick="togglePlay()">
-						<img src="./assets/images/icons/white-with-white-border/sounds-on.png" alt="Lady Ape Club Logo" width="200" />
-					</spam>
+						<img src="./assets/images/icons/white-with-white-border/sounds-on.png" alt="Lady Ape Club Logo"
+							width="200" />
+						</spam>
 				</div>
 			</div>
 		</nav>
 
 		<section class="hero-content">
 			<article>
-				<picture>
+				<picture data-aos="zoom-in-up" data-aos-duration="2000">
 					<img src="./assets/images/hero/lady-ape-club.png" alt="lady ape club" />
 				</picture>
-				<h1>LAC IS <span>MORE THAN</span> JUST AN AVATAR</h1>
-				<p>
+				<h1 data-aos="zoom-in-up" data-aos-duration="1000">LAC IS <span>MORE THAN</span> JUST AN AVATAR</h1>
+				<p data-aos="zoom-in-up" data-aos-duration="1000">
 					<span>LADY APE CLUB (LAC)</span> IS A COLLECTION OF 10,000 LADY APE
 					NFTS. TO CLARIFY, LAC IS NOT AFFILIATED WITH YUGA LABS. NONETHELESS,
 					THE NFT COLLECTION WILL GIVE CONSUMERS FULL OWNERSHIP AND COMMERCIAL
@@ -94,20 +100,45 @@
 			</article>
 		</section>
 
-		<div class="hero-ape-bg"></div>
+		<div class="hero-ape-bg" data-aos="fade-up" data-aos-duration="2000"></div>
 	</header>
+
+	<div class="extra-button-cont">
+		<div class="icon-bar">
+			<a href="javascript:;">
+				<picture><img src="./assets/images/icons/social-icon/white-circle-background/facebook.svg" alt="facebook" /></picture>
+			</a>
+			<a href="javascript:;">
+				<picture><img src="./assets/images/icons/social-icon/white-circle-background/twitter.svg" alt="twitter" /></picture>
+			</a>
+			<a href="javascript:;">
+				<picture><img src="./assets/images/icons/social-icon/white-circle-background/youtube.svg" alt="youtube" /></picture>
+			</a>
+			<a href="javascript:;">
+				<picture><img src="./assets/images/icons/social-icon/white-circle-background/telegram.svg" alt="telegram" /></picture>
+			</a>
+		</div>
+
+		<button onclick="topFunction()" id="scrollToTop" title="Go to top">
+			<picture>
+				<img src="./assets/images/icons/double-arrow-up.svg" alt="scroll to top" />
+			</picture>
+
+			SCROLL TO TOP
+		</button>
+	</div>
 
 	<main>
 		<section>
 			<article class="lac-sec-1 container">
-				<h2 class="sec-title">FIND YOUR LADY APE</h2>
-				<p class="sec-desc">
+				<h2 class="sec-title"  data-aos="fade-up">FIND YOUR LADY APE</h2>
+				<p class="sec-desc"  data-aos="fade-up">
 					THE <span>LADY APE CLUB (LAC)</span> NFT AUCTIONS HAVE SOLD OUT ON
 					BOTH STRMNFT AND OPENSEA. VISIT STRMNFT FOR THE WIDEST SELECTION OF
 					OUR UNIQUE LAC NFTS UP FOR SALE.
 				</p>
 
-				<div class="row sec-inner">
+				<div class="row sec-inner"  data-aos="flip-up">
 					<div class="col-lg-3 col-md-6 col-6 sec-cont">
 						<picture>
 							<img src="./assets/images/icons/nfts.svg" alt="nfts" />
@@ -144,12 +175,12 @@
 				<div class="marquee-content mt-3" id="slide-lac-cont-2"></div>
 			</article>
 
-			<article class="lac-sec-3 container">
-				<h2 class="sec-title">THE TEAM</h2>
+			<article class="lac-sec-3 container" id="LAC-Team">
+				<h2 class="sec-title" data-aos="fade-up">THE TEAM</h2>
 
 				<div class="sec-inner">
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/lac-boss.png" alt="LAC BOSS" />
 						</picture>
 						<p class="name">LAC BOSS</p>
@@ -157,50 +188,50 @@
 							Chief executive and mastermind of the Lady Ape Club
 						</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team1.png" alt="BETTY BOOP" />
 						</picture>
 						<p class="name">BETTY BOOP</p>
 						<p class="desc">Has a ruptured cervical disk</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team2.png" alt="MARGE" />
 						</picture>
 						<p class="name">MARGE</p>
 						<p class="desc">The classy sommelier</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team3.png" alt="HOBERT BETTY" />
 						</picture>
 						<p class="name">HOBERT BETTY</p>
 						<p class="desc">The cheeky fashionista</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team4.png" alt="01" />
 						</picture>
 						<p class="name">01</p>
 						<p class="desc">Eat, Sleep, Draw, Argue</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team5.png" alt="MUNCHIN" />
 						</picture>
 						<p class="name">MUNCHKIN</p>
 						<p class="desc">My life is all about bike and smoking</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team6.png" alt="THE BD" />
 						</picture>
 						<p class="name">THE BD</p>
 						<p class="desc">The greedy a director</p>
 					</div>
-					<div class="text-center sec-cont">
-						<picture>
+					<div class="text-center sec-cont"> 
+						<picture  data-aos="flip-left" data-aos-duration="1000">
 							<img src="./assets/images/the-team/the_team7.png" alt="UNKNOWN" />
 						</picture>
 						<p class="name">UNKNOWN</p>
@@ -244,9 +275,9 @@
 				</div>
 			</article>
 
-			<article class="lac-sec-5">
-				<h2 class="sec-title">THE ROADMAP</h2>
-				<p class="sec-desc">
+			<article class="lac-sec-5" id="LAC-Roadmap">
+				<h2 class="sec-title" data-aos="fade-up">THE ROADMAP</h2>
+				<p class="sec-desc" data-aos="fade-up">
 					WE HAVE <span>DETAILED MILESTONES</span> SET IN PLACE TO SHOW THAT
 					WE ARE HERE FOR THE LONG RUN.
 				</p>
@@ -254,62 +285,62 @@
 				<div class="roadmap-cont">
 					<div class="hex-cont">
 						<ul>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-1.png);
                   " class="div-1">
 								<p>LAC SHOP</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-2.png);
                   " class="div-2">
 								<p>MYSTERY TICKET</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-3.png);
                   " class="div-3">
 								<p>DIAMOND</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-4.png);
                   " class="div-4">
 								<p>DNA</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-5.png);
                   " class="div-5">
 								<p>BREEDING BABY APES</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-6.png);
                   " class="div-6">
 								<p>BABY HOLDER EVENT</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-7.png);
                   " class="div-7">
 								<p>JEWELRY BOX</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-8.png);
                   " class="div-8">
 								<p>KEY</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-9.png);
                   " class="div-9">
 								<p>SUPER DNA</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-10.png);
                   " class="div-10">
 								<p>LAC PROMOTION</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-11.png);
                   " class="div-11">
 								<p>YATCH CLUB</p>
 							</li>
-							<li style="
+							<li data-aos="flip-down" style="
                     background-image: url(./assets/images/road-map/road-map-12.png);
                   " class="div-12">
 								<p>POWDER ROOM</p>
@@ -320,11 +351,11 @@
 			</article>
 
 			<article class="lac-sec-6">
-				
-				<div class="bg-in-between"></div>
-				<h2 class="sec-title">THE LADY APE CLUB STORY</h2>
 
-				<div class="membership_list">
+				<div class="bg-in-between"></div>
+				<h2 class="sec-title" data-aos="fade-up">THE LADY APE CLUB STORY</h2>
+
+				<div class="membership_list" data-aos="fade-up">
 					<div class="photo_wrap">
 						<div class="photo">
 							<div class="photo_frame">
@@ -343,7 +374,7 @@
 					</div>
 				</div>
 
-				<p class="desc">
+				<p class="desc" data-aos="fade-up">
 					Bored Ape #5668 was fed up of the boring life cycle of partying,
 					booze, and other vices. Luckily, he managed to escape from the
 					Boring Island! Soon after, he met the lovely Lady Ape #0. Little did
@@ -354,7 +385,7 @@
 		</section>
 	</main>
 
-	
+
 
 	<footer>
 		<picture>
@@ -370,13 +401,14 @@
 		<p class="copyright">&copy; <a href="#!">TNC ART</a></p>
 	</footer>
 
-    <audio id="player" loop autoplay>
-        <source src="./assets/audio/Bgm.mp3" type="audio/mp3">
-        <source src="./assets/audio/Bgm.org" type="audio/org">
-    </audio>
+	<audio id="player" loop autoplay>
+		<source src="./assets/audio/Bgm.mp3" type="audio/mp3">
+		<source src="./assets/audio/Bgm.org" type="audio/org">
+	</audio>
 
 	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/aos/dist/aos.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 

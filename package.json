@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KuyaLoy/my-frontend-structure-normal-nol-gulf#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "5.2",
     "jquery": "^3.6.0"
   }

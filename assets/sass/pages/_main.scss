@@ -6,26 +6,26 @@
         width: 100%;
     }
 
-    max-width: 1200px;
+    max-width: u.rem(1200);
     margin: 0 auto;
     overflow: hidden;
 
     position: relative;
     overflow: hidden;
 
-    padding: 0 170px;
+    padding: 0 u.rem(170);
 
     box-sizing: border-box;
 
     .main {
         position: relative;
-        max-width: 1200px;
+        max-width: u.rem(1200);
         margin: 0 auto;
         border-bottom: 1px solid #fff;
 
         .main_bg {
-            max-width: 1200px;
-            height: 930px;
+            max-width: u.rem(1200);
+            height: u.rem(930);
             margin: 0 auto;
             background: url(../images/index/background.jpg) no-repeat top center;
             background-size: contain;
@@ -34,10 +34,10 @@
 
         .title_neon {
             position: absolute;
-            top: 40px;
+            top: u.rem(40);
             left: 51%;
             transform: translate(-50%, 0);
-            max-width: 1200px;
+            max-width: u.rem(1200);
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -46,7 +46,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: 180px;
+                width: u.rem(180);
                 transition: .3s ease-in-out;
                 opacity: 1;
 
@@ -73,10 +73,10 @@
         .mobile_title_neon {
             display: none;
             position: absolute;
-            top: 40px;
+            top: u.rem(40);
             left: 51%;
             transform: translate(-50%, 0);
-            max-width: 1200px;
+            max-width: u.rem(1200);
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -85,7 +85,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: 180px;
+                width: u.rem(180);
                 transition: .3s ease-in-out;
                 opacity: 1;
             }
@@ -93,10 +93,10 @@
 
         .neon {
             position: absolute;
-            top: 160px;
+            top: u.rem(160);
             left: 50%;
             transform: translate(-50%, 0);
-            max-width: 1200px;
+            max-width: u.rem(1200);
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -105,7 +105,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: 870px;
+                width: u.rem(870);
                 transition: .3s ease-in-out;
                 opacity: 1;
 
@@ -137,7 +137,7 @@
             top: 160px;
             left: 50%;
             transform: translate(-50%, 0);
-            max-width: 1200px;
+            max-width: u.rem(1200);
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -146,7 +146,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: 870px;
+                width: u.rem(870);
                 transition: .3s ease-in-out;
                 opacity: 1;
             }
@@ -154,10 +154,10 @@
 
         .door {
             position: absolute;
-            top: 225px;
+            top: u.rem(225);
             left: 51%;
             transform: translate(-50%, 0);
-            width: 500px;
+            width: u.rem(500);
             opacity: 1;
             transition: .3s ease-in-out;
 
@@ -166,7 +166,7 @@
             }
 
             &.on {
-                top: 228px;
+                top: u.rem(228);
                 opacity: 0;
 
                 &:hover {
@@ -185,57 +185,57 @@
             left: 50%;
             transform: translate(-50%,0);
             bottom: 0;
-            width: 1000px;
+            width: u.rem(1000);
 
             .monkey {
                 position: absolute;
-                bottom: -4px;
-                left: 158px;
+                bottom: u.rem(-4);
+                left: u.rem(158);
                 z-index: 1;
 
                 img {
-                    width: 300px;
+                    width: u.rem(300);
                 }
             }
             .desc {
                 position: absolute;
-                bottom: 55px;
-                left: 500px;
+                bottom: u.rem(55);
+                left: u.rem(500);
                 color: #fff;
                 z-index: 2;
 
                 p {
                     font-family: 'Jandamana-soild';
-                    line-height: 3.2rem;
-                    font-size: 2.5rem;
+                    line-height: u.rem(60);
+                    font-size: u.rem(42);
                 }
             }
         }
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: u.rem(1200)) {
     .container-main-index {
-        max-width: 960px;
+        max-width: u.rem(960);
         padding: 0;
 
         .main {
             .bottom_img {
                 .desc {
-                    left: 415px;
+                    left: u.rem(415);
                 }
             }
         }   
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: u.rem(990)) {
     .container-main-index {
-        max-width: 720px;
+        max-width: u.rem(720);
 
         .main {
             .main_bg {
-                height: 706px;
+                height: u.rem(706);
             }
 
             .title_neon {
@@ -244,10 +244,10 @@
 
             .mobile_title_neon {
                 display: block;
-                top: 45px;
+                top: u.rem(45);
 
                 img {
-                    width: 145px;
+                    width: u.rem(145);
                 }
             }
 
@@ -257,43 +257,43 @@
 
             .mobile_neon {
                 display: block;
-                width: 600px;
+                width: u.rem(600);
 
                 img {
-                    width: 600px;
+                    width: u.rem(600);
                 }
             }
 
             .door {
-                top: 289px;
-                width: 300px;
+                top: u.rem(289);
+                width: u.rem(300);
 
                 &.on {
-                    top: 291px;
+                    top: u.rem(291);
                 }
             }
 
             .smoke {
-                bottom: 0px;
+                bottom: 0;
             }
 
             .bottom_img {
-                width: 660px;
+                width: u.rem(660);
 
                 .monkey {
-                    left: 145px;
+                    left: u.rem(145);
 
                     img {
-                        width: 200px;
+                        width: u.rem(200);
                     }
                 }
                 .desc {
-                    bottom: 20px;
-                    left: 300px;
+                    bottom: u.rem(20);
+                    left: u.rem(300);
 
                     p {
-                        font-size: 2rem;
-                        line-height: 2.7rem;
+                        font-size: u.rem(30);
+                        line-height: u.rem(35);
                     }
                 }
             }
@@ -301,14 +301,14 @@
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: u.rem(720)) {
     .container-main-index {
-        max-width: 659px;
+        max-width: u.rem(659);
         padding: 0;
 
         .main {
             .main_bg {
-                margin-bottom: 100px;
+                margin-bottom: u.rem(100);
             }
             .title_neon {
                 display: none;
@@ -320,33 +320,33 @@
 
             .door.on {
                 display: block;
-                top: 239px;
-                width: 420px;
+                top: u.rem(239);
+                width: u.rem(420);
                 opacity: 1;
             }
 
             .smoke {
-                bottom: 20px;
+                bottom: u.rem(20);
             }
 
             .bottom_img {
-                width: 540px;
+                width: u.rem(540);
 
                 .monkey {
-                    left: 10px;
+                    left: u.rem(10);
 
                     img {
-                        width: 222px;
+                        width: u.rem(222);
                     }
                 }
 
                 .desc {
-                    bottom: 20px;
-                    left: 225px;
+                    bottom: u.rem(20);
+                    left: u.rem(225);
 
                     p {
-                        font-size: 2rem;
-                        line-height: 2rem;
+                        font-size: u.rem(26);
+                        line-height: u,rem(25);
                     }
                 }
             }
@@ -354,9 +354,9 @@
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: u.rem(660)) {
     .container-main-index {
-        max-width: 659px;
+        max-width: u.rem(659);
         padding: 0;
 
         .main {
@@ -368,57 +368,57 @@
                 width: 100%;
 
                 .monkey {
-                    left: 10px;
+                    left: u.rem(10);
                 }
             }
         }
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: u.rem(430)) {
     .container-main-index {
         .main {
             .main_bg {
-                height: 549px;
+                height: u.rem(549);
             }
     
             .mobile_title_neon {
-                top: 135px;
+                top: u.rem(135);
     
                 img {
-                    width: 120px;
-                    top: -70px;
+                    width: u.rem(120);
+                    top: u.rem(-70);
                 }
             }
     
             .mobile_neon {
-                top: 185px;
+                top: u.rem(185);
     
                 img {
-                    width: 420px;
+                    width: u.rem(420);
                 }
             }
     
             .door.on {
-                width: 280px;
+                width: u.rem(280);
             }
     
             .smoke {
-                bottom: 35px;
+                bottom: u.rem(35);
             }
     
             .bottom_img {
-                width: 415px;
+                width: u.rem(415);
     
                 .monkey {
                     img {
-                        width: 175px;
+                        width: u.rem(175);
                     }
                 }
                 .desc {
-                    left: 160px;
+                    left: u.rem(160);
                     p {
-                        font-size: 1.3rem;
+                        font-size: u.rem(16);
                     }
                 }
             }

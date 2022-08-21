@@ -1,5 +1,15 @@
 // PLEASE ALWAYS ADD COMMENT WHICH IS JAVASCRIPT IS USED FOR
 
+
+
+//init AOS
+AOS.init({ 
+  disable: function() {
+    var maxWidth = 899;
+    return window.innerWidth < maxWidth;
+  }
+}); 
+
 // navbar scroll up and down show
 var prevScrollpos = window.pageYOffset;
 var minTop = 140;
@@ -10,6 +20,7 @@ if(prevScrollpos > minTop) {
     "background":"rgba(0,0,0,.2)",
     "backdrop-filter":"blur(12px)"
   });
+  $("#scrollToTop").css({'display':'flex'});
 }
 
 window.onscroll = function() {
@@ -20,6 +31,7 @@ window.onscroll = function() {
       $(".navApe").css( {
         "top":"-140px"
       }); 
+      $("#scrollToTop").css({'display':'flex'});
     } 
   } else {
     $(".navApe").css( {
@@ -35,6 +47,7 @@ window.onscroll = function() {
         "background":"transparent",
         "backdrop-filter":"unset"
       });
+      $("#scrollToTop").css({'display':'none'});
     }
   }
   prevScrollpos = currentScrollPos;
@@ -98,6 +111,16 @@ function menuToggle() {
 
 }
 
+//close menu
+let windowsize = $(window). width();
+
+function closeMenu() {
+  if(windowsize < 900) {
+    menuToggle();
+  }
+}
+
+
 // add plaay audio
 var myAudio = document.getElementById("player");
 var isPlaying = false;
@@ -113,7 +136,42 @@ myAudio.onpause = function() {
   isPlaying = false;
 };
 
+//return-top
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
+//countdown
+var zeroCount = 0;
+$(window).scroll(function() {
 
+  var oTop = $('.lac-sec-1 .sec-inner').offset().top - window.innerHeight;
+  if (zeroCount == 0 && $(window).scrollTop() > oTop) {
+    $('.value2').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('akhi');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
 
+        {
 
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    zeroCount = 1;
+  }
+
+});
