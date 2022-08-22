@@ -40,43 +40,45 @@
 </head>
 
 <body id="LAC-Home">
-	<header>
-		<nav class="navApe">
-			<div class="navApe__cont">
-				<picture class="navApe__cont__logo">
-					<a href="index.html">
-						<img src="./assets/images/logo/logo.png" alt="Lady Ape Club Logo" width="200" />
-					</a>
-				</picture>
-				<ul class="navApe__cont__list">
-					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Home">Buy Lady Ape</a></li>
-					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Team">Team</a></li>
-					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Roadmap">Roadmap</a></li>
-					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Gallery</a></li>
-					<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Members</a></li>
-					<span class="close-menu" onclick="menuToggle()">
-						<picture>
-							<img src="./assets/images/icons/white-close.svg" alt="close">
-						</picture>
-					</span>
-				</ul>
-				<div class="navApe__cont__menu">
-					<div class="navApe__cont__menu__burger" onclick="menuToggle()">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-				<div class="navApe__cont__sound">
-					<span onclick="togglePlay()">
-						<img src="./assets/images/icons/white-with-white-border/sounds-off.svg" alt="Lady Ape Club soundtrack"
-							width="200" />
-						<img src="./assets/images/icons/white-with-white-border/sounds-on.svg" alt="Lady Ape Club soundtrack"
-							width="200" style="display: none;" />
-						</spam>
+	
+	<nav class="navApe">
+		<div class="navApe__cont">
+			<picture class="navApe__cont__logo">
+				<a href="index.html">
+					<img src="./assets/images/logo/logo.png" alt="Lady Ape Club Logo" width="200" />
+				</a>
+			</picture>
+			<ul class="navApe__cont__list">
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Home">Buy Lady Ape</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Team">Team</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Roadmap">Roadmap</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="gallery.html">Gallery</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Members</a></li>
+				<span class="close-menu" onclick="menuToggle()">
+					<picture>
+						<img src="./assets/images/icons/white-close.svg" alt="close">
+					</picture>
+				</span>
+			</ul>
+			<div class="navApe__cont__menu">
+				<div class="navApe__cont__menu__burger" onclick="menuToggle()">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 			</div>
-		</nav>
+			<div class="navApe__cont__sound">
+				<span onclick="togglePlay()">
+					<img src="./assets/images/icons/white-with-white-border/sounds-off.svg" alt="Lady Ape Club soundtrack"
+						width="200" />
+					<img src="./assets/images/icons/white-with-white-border/sounds-on.svg" alt="Lady Ape Club soundtrack"
+						width="200" style="display: none;" />
+					</spam>
+			</div>
+		</div>
+	</nav>
+
+	<header class="lac-home-header">
 
 		<section class="hero-content">
 			<article>
@@ -578,8 +580,6 @@
 		</section>
 	</main>
 
-
-
 	<footer>
 		<picture>
 			<img src="./assets/images/logo/tnc-art.png" alt="TNC ART LOGO" />
@@ -602,6 +602,7 @@
 	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="./node_modules/aos/dist/aos.js"></script>
+	<script src="./assets/js/home-loop-image.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 
