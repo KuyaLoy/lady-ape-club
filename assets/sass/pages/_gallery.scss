@@ -73,7 +73,9 @@ section.LAC-gallery {
                     border: 1px solid #878787;
                 }
                 .lac-filter-accordian {
+
                     margin-top: 25px;
+
                     button.accordion {
                         width: 100%;
                         background: transparent;
@@ -112,6 +114,29 @@ section.LAC-gallery {
                         max-height: 0;
                         overflow: hidden;
                         transition: max-height 0.2s ease-in-out;
+
+                        label {
+                            display: flex;
+                            padding: 7.5px 0 7.5px 7.5px;
+                            color: #B2B2B2;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 14px;
+                            font-family: "Gilroy-Regular";
+                            letter-spacing: 1.4px;
+                            cursor: pointer;
+
+                            &:first-child {
+                                padding-top: 15px;
+                            } 
+                            &:last-child {
+                                padding-bottom: 15px;
+                            }
+
+                            input[type=checkbox] {
+                                visibility: hidden;
+                            }
+                        }
                       }
                 }
                 
