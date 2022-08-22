@@ -19,63 +19,12 @@ section.LAC-gallery {
         }
 
         aside {
-            height: 50px;
-            //background-color: green;
-
-            display: none;
-
-            @include u.breakpoint-min(large) {
-                min-height: 75vh;
-                display: block;
-            }
-
-             
+            
             section {
-                .filter-title {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    
-                    p {
-                        color: #FFD45E;
-                        font-family: 'Gilroy-Bold';
-                        letter-spacing: 1.8px;
-                    }
-
-                    span {
-                        color: #878787;
-                        font-size: 14px;
-                        font-family: 'Gilroy-Regular';
-                        letter-spacing: 1.4px;
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-
-                        img {
-                            width: 16px;
-                            height: 16px;
-                            object-fit: cover;
-                        }
-                    }
-                }
-
-                input[type=search] {
-                    margin-top: 30px;
-                    width: 100%;
-                    font-size: 12px;
-                    font-family: "Gilroy-Regular";
-                    letter-spacing: 1.2px;
-                    background: none;
-                    outline: none;
-                    padding: 10px 20px;
-                    border-radius: 6px;
-                    color: #878787;
-                    border: 1px solid #878787;
-                }
                 .lac-filter-accordian {
-
+    
                     margin-top: 25px;
-
+    
                     button.accordion {
                         width: 100%;
                         background: transparent;
@@ -89,7 +38,7 @@ section.LAC-gallery {
                         font-family: "Gilroy-Regular";
                         cursor: pointer;
                         transition: background-color 0.2s linear;
-
+    
                         &::after {
                             font-family: FontAwesome;
                             content: "\f150";
@@ -97,7 +46,7 @@ section.LAC-gallery {
                             font-size: 18px;
                             float: right;
                         }
-
+    
                         &.is-open {
                             &::after {
                                 content: "\f151";
@@ -114,7 +63,7 @@ section.LAC-gallery {
                         max-height: 0;
                         overflow: hidden;
                         transition: max-height 0.2s ease-in-out;
-
+    
                         label {
                             display: flex;
                             padding: 7.5px 0 7.5px 7.5px;
@@ -125,21 +74,128 @@ section.LAC-gallery {
                             font-family: "Gilroy-Regular";
                             letter-spacing: 1.4px;
                             cursor: pointer;
-
+    
                             &:first-child {
                                 padding-top: 15px;
                             } 
                             &:last-child {
                                 padding-bottom: 15px;
                             }
-
-                            input[type=checkbox] {
-                                visibility: hidden;
-                            }
+    
+                            // input[type=checkbox] {
+                            //     visibility: hidden;
+                            // }
                         }
                       }
                 }
-                
+    
+                .filter-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    p {
+                        color: #FFD45E;
+                        font-family: 'Gilroy-Bold';
+                        letter-spacing: 1.8px;
+                    }
+    
+                    span {
+                        color: #878787;
+                        font-size: 14px;
+                        font-family: 'Gilroy-Regular';
+                        letter-spacing: 1.4px;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+    
+                        img {
+                            width: 16px;
+                            height: 16px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+    
+                input[type=search] {
+                    margin-top: 30px;
+                    width: 100%;
+                    font-size: 12px;
+                    font-family: "Gilroy-Regular";
+                    letter-spacing: 1.2px;
+                    background: none;
+                    outline: none;
+                    padding: 10px 20px;
+                    border-radius: 6px;
+                    color: #878787;
+                    border: 1px solid #878787;
+                }
+            }
+        }
+        @include u.breakpoint-max(medium) {
+            aside.main-filter {
+                /* display: flex; */
+                position: absolute;
+                background: #000000b0;
+                backdrop-filter: blur(12px);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+
+                section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    max-height: 80%;
+                    overflow: auto;
+
+                    width: 80%;
+
+                    .filter-title {
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        
+                        p {
+                            color: #FFD45E;
+                            font-family: 'Gilroy-Bold';
+                            letter-spacing: 1.8px;
+                        }
+    
+                        span {
+                            color: #878787;
+                            font-size: 14px;
+                            font-family: 'Gilroy-Regular';
+                            letter-spacing: 1.4px;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+    
+                            img {
+                                width: 16px;
+                                height: 16px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .lac-filter-accordian {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: 1fr;
+                        grid-column-gap: 20px;
+                        grid-row-gap: 0px;
+                        width: 100%;
+                    }
+                }
             }
         }
 
