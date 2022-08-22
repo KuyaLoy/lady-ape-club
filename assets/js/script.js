@@ -131,9 +131,13 @@ function togglePlay() {
 
 myAudio.onplaying = function() {
   isPlaying = true;
+  $('.navApe__cont__sound img:nth-child(1)').hide();
+  $('.navApe__cont__sound img:nth-child(2)').show();
 };
 myAudio.onpause = function() {
   isPlaying = false;
+  $('.navApe__cont__sound img:nth-child(1)').show();
+  $('.navApe__cont__sound img:nth-child(2)').hide();
 };
 
 //return-top
@@ -142,36 +146,26 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-//countdown
-var zeroCount = 0;
-$(window).scroll(function() {
+//roadmap popup
+function closeRoadmap() {
+  $('.roadmap-popup').fadeOut();
+  $('.roadmap-popup .content').fadeOut();
+  $('body').removeClass('overflow-hidden');
+} 
 
-  var oTop = $('.lac-sec-1 .sec-inner').offset().top - window.innerHeight;
-  if (zeroCount == 0 && $(window).scrollTop() > oTop) {
-    $('.value2').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('akhi');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
+function openRoadmap(el) {
+  $('.roadmap-popup').fadeIn();
+  $('.roadmap-popup .content[content='+el+']').fadeIn();
+  $('body').addClass('overflow-hidden');
+} 
 
-        {
+$(document).mouseup(function(e) 
+{
+    var container = $(".roadmap-popup .content");
 
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
-
-        });
-    });
-    zeroCount = 1;
-  }
-
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+      closeRoadmap();
+    }
 });

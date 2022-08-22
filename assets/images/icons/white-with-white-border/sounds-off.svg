@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="Group_415" data-name="Group 415" transform="translate(-1822 -249)">
+    <g id="Ellipse_2963" data-name="Ellipse 2963" transform="translate(1822 249)" fill="none" stroke="#fff" stroke-width="2">
+      <circle cx="17.5" cy="17.5" r="17.5" stroke="none"/>
+      <circle cx="17.5" cy="17.5" r="16.5" fill="none"/>
+    </g>
+    <g id="Group_416" data-name="Group 416" transform="translate(1829.84 257.074)">
+      <path id="Path_30377" data-name="Path 30377" d="M5.387,20.215a2.227,2.227,0,1,1,2.227-2.227A2.227,2.227,0,0,1,5.387,20.215Z" transform="translate(0 -3.958)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
+      <path id="Path_30378" data-name="Path 30378" d="M17.567,12.545V3.835c0-1.856-1.164-2.113-2.342-1.792L10.771,3.257A1.778,1.778,0,0,0,9.4,5.049v8.974" transform="translate(-1.785 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_30379" data-name="Path 30379" d="M16.827,18.135a2.227,2.227,0,1,1,2.227-2.227A2.227,2.227,0,0,1,16.827,18.135Z" transform="translate(-3.273 -3.363)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
+      <path id="Path_30380" data-name="Path 30380" d="M9.4,8.627,17.567,6.4" transform="translate(-1.785 -1.28)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

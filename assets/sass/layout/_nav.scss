@@ -287,6 +287,19 @@
             @include u.breakpoint-min(large) {
                 right: 0;
             }
+
+            // &:hover {
+                
+            //     img {
+            //         &:nth-child(1) {
+            //             display: none;
+            //         }
+            //         &:nth-child(2) {
+            //             display: block;
+            //         }
+            //     }
+
+            // }
             
         }
     }

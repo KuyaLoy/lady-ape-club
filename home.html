@@ -44,7 +44,7 @@
 		<nav class="navApe">
 			<div class="navApe__cont">
 				<picture class="navApe__cont__logo">
-					<a href="#!">
+					<a href="index.html">
 						<img src="./assets/images/logo/logo.png" alt="Lady Ape Club Logo" width="200" />
 					</a>
 				</picture>
@@ -68,9 +68,11 @@
 					</div>
 				</div>
 				<div class="navApe__cont__sound">
-					<span href="" onclick="togglePlay()">
-						<img src="./assets/images/icons/white-with-white-border/sounds-on.png" alt="Lady Ape Club Logo"
+					<span onclick="togglePlay()">
+						<img src="./assets/images/icons/white-with-white-border/sounds-off.svg" alt="Lady Ape Club soundtrack"
 							width="200" />
+						<img src="./assets/images/icons/white-with-white-border/sounds-on.svg" alt="Lady Ape Club soundtrack"
+							width="200" style="display: none;" />
 						</spam>
 				</div>
 			</div>
@@ -285,67 +287,262 @@
 				<div class="roadmap-cont">
 					<div class="hex-cont">
 						<ul>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(1)" style="
                     background-image: url(./assets/images/road-map/road-map-1.png);
                   " class="div-1">
-								<p>LAC SHOP</p>
+								<p>LAC SHOP
+								</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(2)" style="
                     background-image: url(./assets/images/road-map/road-map-2.png);
                   " class="div-2">
 								<p>MYSTERY TICKET</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(3)" style="
                     background-image: url(./assets/images/road-map/road-map-3.png);
                   " class="div-3">
 								<p>DIAMOND</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(4)" style="
                     background-image: url(./assets/images/road-map/road-map-4.png);
                   " class="div-4">
 								<p>DNA</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(5)" style="
                     background-image: url(./assets/images/road-map/road-map-5.png);
                   " class="div-5">
 								<p>BREEDING BABY APES</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(6)" style="
                     background-image: url(./assets/images/road-map/road-map-6.png);
                   " class="div-6">
 								<p>BABY HOLDER EVENT</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(7)" style="
                     background-image: url(./assets/images/road-map/road-map-7.png);
                   " class="div-7">
 								<p>JEWELRY BOX</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(8)" style="
                     background-image: url(./assets/images/road-map/road-map-8.png);
                   " class="div-8">
 								<p>KEY</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(9)" style="
                     background-image: url(./assets/images/road-map/road-map-9.png);
                   " class="div-9">
 								<p>SUPER DNA</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(10)" style="
                     background-image: url(./assets/images/road-map/road-map-10.png);
                   " class="div-10">
 								<p>LAC PROMOTION</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(11)" style="
                     background-image: url(./assets/images/road-map/road-map-11.png);
                   " class="div-11">
 								<p>YATCH CLUB</p>
 							</li>
-							<li data-aos="flip-down" style="
+							<li data-aos="flip-down" data-aos-duration="1500" onclick="openRoadmap(12)" style="
                     background-image: url(./assets/images/road-map/road-map-12.png);
                   " class="div-12">
 								<p>POWDER ROOM</p>
 							</li>
 						</ul>
+					</div>
+				</div>
+
+				<div class="roadmap-popup" style="display: none;">
+					<div class="content"  content="1">
+						<h3>lac shop</h3>
+						<p>A store with various content for LAC holders.
+							Holders can use Diamonds to purchase
+							items in the LAC Shop.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="2">
+						<h3>Mystery Ticket</h3>
+						<p>A Mystery Ticket allows holders
+							to participate in various upcoming
+							content. The tickets can be found in
+							the Powder Room.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="3">
+						<h3>diamonds</h3>
+						<p>LAC's unique utility token is the ‘Diamond’.
+							These have no real market
+							value outside of LAC.
+							Holders can earn ‘Diamonds’ through
+							missions and use them to purchase
+							items through the LAC Shop.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="4">
+						<h3>DNA</h3>
+						<p>A DNA is required to breed
+							Baby Apes when used together with
+							aJewelry Box. Each DNA is sold for
+							300 Diamond Tokens.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="5">
+						<h3>Breeding Baby Apes</h3>
+						<p>Baby Apes are divided into three tiers:
+							Silver, Gold, and Diamond.
+							Tier Grades are given randomly when
+							bred using ‘DNA’ and a ‘Jewelry Box’.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="6">
+						<h3>BAYC Holder Event</h3>
+						<p>100 people holding BAYCs will each receive
+							1 LAC for free. Holders will
+							be rewarded automatically
+							with Super DNA.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="8">
+						<h3>Key</h3>
+						<p>The key is used to open the
+							Powder Room. The price is yet
+							to be determined.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="7">
+						<h3>Jewelry Box</h3>
+						<p>A Jewelry Box is required to
+							breed Baby Apes when used together
+							with DNA (similar to an incubator).
+							Each Jewelry Box is sold for
+							600 Diamond Tokens.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="9">
+						<h3>Super DNA</h3>
+						<p>Super DNA has a higher chance to
+							breed high-tier Baby Apes and this is
+							only offered to BAYC holders.
+							Breeding can be done after
+							purchasing a Jewelry Box
+							required for breeding.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="10">
+						<h3>STRMNFT & LAC Promotions</h3>
+						<p class="gilroy-bold">1. Register in STRMNFT Marketplace</p>
+						<p>Once you register on STRMNFT,</p>
+						<p>you will receive 300 Diamonds.</p>
+						<p>Sign up here: <a href="https://www.strmnft.com" target="_blank">https://www.strmnft.com</a></p>
+
+						<br>
+
+						<p class="gilroy-bold">2. Register in LAC NFT Shop</p>
+						<p>After you register on the LAC NFT Shop,</p>
+						<p>you will receive an additional 300 Diamonds.</p>
+						<p>Sign up here: Coming Soon!</p>
+						<br>
+						<p>Note: Make sure to sign up first on STRMNFT</p>
+						<p>before attempting to register on the LAC NFT Shop.</p>
+
+						<br>
+
+						<p class="gilroy-bold">3. Follow LAC Social Media</p>
+						<p>You can also receive up to 150 Diamonds</p>
+						<p>by simply following our official social media channels,</p>
+						<p>particularly Twitter and Discord.</p>
+						<p>This bonus is available only once per person.</p>
+						<p>We will not approve those who attempt to circumvent this rule.</p>
+
+						<br>
+
+						<p>Twitter: <a href="https://twitter.com/ladyapeclub" target="_blank">https://twitter.com/ladyapeclub</a></p>
+						<p>Discord: <a href="https://discord.com/invite/Ban6ZBy5V2" target="_blank">https://discord.com/invite/Ban6ZBy5V2</a></p>
+						
+						<br>
+							<p class="gilroy-bold">4. Retweet Our Pinned Post</p>
+							<p>LAC will also pin important announcements every now and then.</p>
+							<p>LAC NFT holders who retweet our pinned posts can obtain</p>
+							<p>50 Diamonds.</p>
+							<p>Send us a screenshot of your retweet alongside your</p>
+							<p>LAC membership ID</p>
+							<p>(e.g., <a href="https://prnt.sc/3S0Tpw1-PBtE">https://prnt.sc/3S0Tpw1-PBtE</a> )</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="11">
+						<h3>Yacht Club</h3>
+						<p>Actual real-life exclusive
+							Yacht Party to be held in Dubai.
+							Details of this exclusive event will
+							be updated at a later date.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
+					</div>
+					<div class="content"  content="12">
+						<h3>Powder Room</h3>
+						<p>A dressing table that contains
+							mystery tickets. The price is
+							yet to be determined.</p>
+
+						<span class="close-menu" onclick="closeRoadmap()">
+							<picture>
+								<img src="./assets/images/icons/white-close.svg" alt="close">
+							</picture>
+						</span>
 					</div>
 				</div>
 			</article>
@@ -375,11 +572,7 @@
 				</div>
 
 				<p class="desc" data-aos="fade-up">
-					Bored Ape #5668 was fed up of the boring life cycle of partying,
-					booze, and other vices. Luckily, he managed to escape from the
-					Boring Island! Soon after, he met the lovely Lady Ape #0. Little did
-					they know what delightful surprise awaited them after their baby ape
-					was born...
+					Bored Ape #5668 was fed up of the boring life cycle of partying, booze, and other vices. Luckily, he managed to escape from the Boring Island! Soon after, he met the lovely Lady Ape #0. Little did they know what delightful surprise awaited them after their baby ape was born...
 				</p>
 			</article>
 		</section>

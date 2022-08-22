@@ -6,26 +6,26 @@
         width: 100%;
     }
 
-    max-width: u.rem(1200);
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 
     position: relative;
     overflow: hidden;
 
-    padding: 0 u.rem(170);
+    padding: 0 170px;
 
     box-sizing: border-box;
 
     .main {
         position: relative;
-        max-width: u.rem(1200);
+        max-width: 1200px;
         margin: 0 auto;
         border-bottom: 1px solid #fff;
 
         .main_bg {
-            max-width: u.rem(1200);
-            height: u.rem(930);
+            max-width: 1200px;
+            height: 930px;
             margin: 0 auto;
             background: url(../images/index/background.jpg) no-repeat top center;
             background-size: contain;
@@ -34,10 +34,10 @@
 
         .title_neon {
             position: absolute;
-            top: u.rem(40);
+            top: 40px;
             left: 51%;
             transform: translate(-50%, 0);
-            max-width: u.rem(1200);
+            max-width: 1200px;
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -46,7 +46,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: u.rem(180);
+                width: 180px;
                 transition: .3s ease-in-out;
                 opacity: 1;
 
@@ -73,10 +73,10 @@
         .mobile_title_neon {
             display: none;
             position: absolute;
-            top: u.rem(40);
+            top: 40px;
             left: 51%;
             transform: translate(-50%, 0);
-            max-width: u.rem(1200);
+            max-width: 1200px;
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -85,7 +85,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: u.rem(180);
+                width: 180px;
                 transition: .3s ease-in-out;
                 opacity: 1;
             }
@@ -93,10 +93,10 @@
 
         .neon {
             position: absolute;
-            top: u.rem(160);
+            top: 160px;
             left: 50%;
             transform: translate(-50%, 0);
-            max-width: u.rem(1200);
+            max-width: 1200px;
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -105,7 +105,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: u.rem(870);
+                width: 870px;
                 transition: .3s ease-in-out;
                 opacity: 1;
 
@@ -137,7 +137,7 @@
             top: 160px;
             left: 50%;
             transform: translate(-50%, 0);
-            max-width: u.rem(1200);
+            max-width: 1200px;
             transition: .3s ease-in-out;
             opacity: 1;
 
@@ -146,7 +146,7 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                width: u.rem(870);
+                width: 870px;
                 transition: .3s ease-in-out;
                 opacity: 1;
             }
@@ -154,10 +154,10 @@
 
         .door {
             position: absolute;
-            top: u.rem(225);
+            top: 225px;
             left: 51%;
             transform: translate(-50%, 0);
-            width: u.rem(500);
+            width: 500px;
             opacity: 1;
             transition: .3s ease-in-out;
 
@@ -166,7 +166,7 @@
             }
 
             &.on {
-                top: u.rem(228);
+                top: 228px;
                 opacity: 0;
 
                 &:hover {
@@ -185,57 +185,57 @@
             left: 50%;
             transform: translate(-50%,0);
             bottom: 0;
-            width: u.rem(1000);
+            width: 1000px;
 
             .monkey {
                 position: absolute;
-                bottom: u.rem(-4);
-                left: u.rem(158);
+                bottom: -4px;
+                left: 158px;
                 z-index: 1;
 
                 img {
-                    width: u.rem(300);
+                    width: 300px;
                 }
             }
             .desc {
                 position: absolute;
-                bottom: u.rem(55);
-                left: u.rem(500);
+                bottom: 55px;
+                left: 500px;
                 color: #fff;
                 z-index: 2;
 
                 p {
                     font-family: 'Jandamana-soild';
-                    line-height: u.rem(60);
-                    font-size: u.rem(42);
+                    line-height: 60px;
+                    font-size: 42px;
                 }
             }
         }
     }
 }
 
-@media (max-width: u.rem(1200)) {
+@media (max-width: 1200px) {
     .container-main-index {
-        max-width: u.rem(960);
+        max-width: 960px;
         padding: 0;
 
         .main {
             .bottom_img {
                 .desc {
-                    left: u.rem(415);
+                    left: 415px;
                 }
             }
         }   
     }
 }
 
-@media (max-width: u.rem(990)) {
+@media (max-width: 990px) {
     .container-main-index {
-        max-width: u.rem(720);
+        max-width: 720px;
 
         .main {
             .main_bg {
-                height: u.rem(706);
+                height: 706px;
             }
 
             .title_neon {
@@ -244,10 +244,10 @@
 
             .mobile_title_neon {
                 display: block;
-                top: u.rem(45);
+                top: 45px;
 
                 img {
-                    width: u.rem(145);
+                    width: 145px;
                 }
             }
 
@@ -257,19 +257,19 @@
 
             .mobile_neon {
                 display: block;
-                width: u.rem(600);
+                width: 600px;
 
                 img {
-                    width: u.rem(600);
+                    width: 600px;
                 }
             }
 
             .door {
-                top: u.rem(289);
-                width: u.rem(300);
+                top: 289px;
+                width: 300px;
 
                 &.on {
-                    top: u.rem(291);
+                    top: 291px;
                 }
             }
 
@@ -278,22 +278,22 @@
             }
 
             .bottom_img {
-                width: u.rem(660);
+                width: 660px;
 
                 .monkey {
-                    left: u.rem(145);
+                    left: 145px;
 
                     img {
-                        width: u.rem(200);
+                        width: 200px;
                     }
                 }
                 .desc {
-                    bottom: u.rem(20);
-                    left: u.rem(300);
+                    bottom: 20px;
+                    left: 300px;
 
                     p {
-                        font-size: u.rem(30);
-                        line-height: u.rem(35);
+                        font-size: 30px;
+                        line-height: 35px;
                     }
                 }
             }
@@ -301,14 +301,14 @@
     }
 }
 
-@media (max-width: u.rem(720)) {
+@media (max-width: 720px) {
     .container-main-index {
-        max-width: u.rem(659);
+        max-width: 659px;
         padding: 0;
 
         .main {
             .main_bg {
-                margin-bottom: u.rem(100);
+                margin-bottom: 100px;
             }
             .title_neon {
                 display: none;
@@ -320,33 +320,33 @@
 
             .door.on {
                 display: block;
-                top: u.rem(239);
-                width: u.rem(420);
+                top: 239px;
+                width: 420px;
                 opacity: 1;
             }
 
             .smoke {
-                bottom: u.rem(20);
+                bottom: 20px;
             }
 
             .bottom_img {
-                width: u.rem(540);
+                width: 540px;
 
                 .monkey {
-                    left: u.rem(10);
+                    left: 10px;
 
                     img {
-                        width: u.rem(222);
+                        width: 222px;
                     }
                 }
 
                 .desc {
-                    bottom: u.rem(20);
-                    left: u.rem(225);
+                    bottom: 20px;
+                    left: 225px;
 
                     p {
-                        font-size: u.rem(26);
-                        line-height: u,rem(25);
+                        font-size: 26px;
+                        line-height: 25px;
                     }
                 }
             }
@@ -354,9 +354,9 @@
     }
 }
 
-@media (max-width: u.rem(660)) {
+@media (max-width: 660px) {
     .container-main-index {
-        max-width: u.rem(659);
+        max-width: 659px;
         padding: 0;
 
         .main {
@@ -368,57 +368,57 @@
                 width: 100%;
 
                 .monkey {
-                    left: u.rem(10);
+                    left: 10px;
                 }
             }
         }
     }
 }
 
-@media (max-width: u.rem(430)) {
+@media (max-width: 430px) {
     .container-main-index {
         .main {
             .main_bg {
-                height: u.rem(549);
+                height: 549px;
             }
     
             .mobile_title_neon {
-                top: u.rem(135);
+                top: 135px;
     
                 img {
-                    width: u.rem(120);
-                    top: u.rem(-70);
+                    width: 120px;
+                    top: -70px;
                 }
             }
     
             .mobile_neon {
-                top: u.rem(185);
+                top: 185px;
     
                 img {
-                    width: u.rem(420);
+                    width: 420px;
                 }
             }
     
             .door.on {
-                width: u.rem(280);
+                width: 280px;
             }
     
             .smoke {
-                bottom: u.rem(35);
+                bottom: 35px;
             }
     
             .bottom_img {
-                width: u.rem(415);
+                width: 415px;
     
                 .monkey {
                     img {
-                        width: u.rem(175);
+                        width: 175px;
                     }
                 }
                 .desc {
-                    left: u.rem(160);
+                    left: 160px;
                     p {
-                        font-size: u.rem(16);
+                        font-size: 16px;
                     }
                 }
             }

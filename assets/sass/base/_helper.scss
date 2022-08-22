@@ -24,6 +24,7 @@
     font-size: u.rem(14);
     text-align: center;
     font-family: "Gilroy-Regular";
+    line-height: u.rem(30);
 
     @include u.breakpoint-min(medium) {
         letter-spacing: u.rem(1.8);
