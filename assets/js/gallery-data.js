@@ -2,16 +2,16 @@ const reset = document.querySelector(".reset_btn > button");
 
 var section = document.querySelector("#list-lac-nft");
 
-const galleryLoader = $(".loader-wrapper");
+const galleryLoader = $(".gallery-cont");
 let start = 0;
-let end = 99;
+let end = 12;
 
 function loader(show = true) {
 	if (show) {
-		galleryLoader.removeClass("hide");
+		galleryLoader.addClass("loader");
 		return;
 	}
-	galleryLoader.addClass("hide");
+	galleryLoader.removeClass("loader");
 }
 
 loader();
@@ -37,19 +37,19 @@ fetch(`./assets/json/meta.json`)
 function filter() {
 	var meta = isFilter ? filterData : metaData;
 	meta = meta.slice(start, end);
-	console.log(meta, "here");
+	//console.log(meta, "here");
 
-	// if (!meta.length) {
-	// 	$(".gallery .data").html("<h5>No results found</h5>");
-	// 	loader(false);
-	// 	return;
-	// }
+	if (!meta.length) {
+		$(".gallery .data").html("<h5>No results found</h5>");
+		loader(false);
+		return;
+	}
 
 	for (let i = 0; i < meta.length; i++) {
 		var li = document.createElement("li");
 		var a = document.createElement("a");
 		a.setAttribute("href", meta[i].hash);
-    a.target = "_blank";
+    	a.target = "_blank";
 		var myPara1 = document.createElement("p");
 		// console.log(meta[i].attributes)
 		var img = document.createElement("img");
@@ -134,12 +134,16 @@ function filter() {
 				reachedBottom = true;
 				setTimeout(function () {
 					start = end;
-					end = end + 99;
+					end = end + 12;
 					filter();
 				}, 1000);
 			}
 		}
 	});
 }
+
+
+
+
 
 

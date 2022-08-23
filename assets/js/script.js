@@ -160,6 +160,3 @@ $(document).mouseup(function(e) {
       }
     }
 });
-
-
-// json mapping
