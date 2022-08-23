@@ -142,7 +142,83 @@ function filter() {
 	});
 }
 
+function initFilter() {
+	let special = $("input[id*='LacBackground_']").val();
+	let background = $("input[id*='LacBackground_']:checked").val();
+	let clothes = $("#filter-clothes:checked").val();
+	let earring = $("#filter-earring:checked").val();
+	let necklace = $("#filter-necklace:checked").val();
+	let eyes = $("#filter-eyes:checked").val();
+	let mouth = $("#filter-mouth:checked").val();
+	let glasses = $("#filter-glasses:checked").val();
+	let fur = $("#filter-fur:checked").val();
+	let head = $("#filter-hair:checked").val();
+	let id = $("#search_form input").val();
 
+	filterData = metaData
+		.filter(function (item) {
+			// if (background && item.attributes.Background !== background) {
+			// 	return false;
+			// }
+			if (special && item.attributes.Special !== special) {
+				return false;
+			}
+			if (background && item.attributes.Background !== background) {
+				return false;
+			}
+			if (clothes && item.attributes.Clothes !== clothes) {
+				return false;
+			}
+			if (earring && item.attributes.Earring !== earring) {
+				return false;
+			}
+			if (necklace && item.attributes.Necklace !== necklace) {
+				return false;
+			}
+			if (eyes && item.attributes.Eyes !== eyes) {
+				return false;
+			}
+			if (mouth && item.attributes.Mouth !== mouth) {
+				return false;
+			}
+			if (glasses && item.attributes.Glasses !== glasses) {
+				return false;
+			}
+			if (fur && item.attributes.Fur !== fur) {
+				return false;
+			}
+			if (head && item.attributes.Head !== head) {
+				return false;
+			}
+			if (id && item.name !== id) {
+				return false;
+			}
+			return true;
+		})
+		.sort(function (a, b) {
+			a = +a.name;
+			b = +b.name;
+			return a - b;
+		});
+
+	isFilter = true;
+	start = 0;
+	end = 12;
+	$("#list-lac-nft").html("");
+	filter();
+}
+
+$(".lacFilter input").on("change", function () {
+	initFilter();
+});
+
+// $(document).ready(function () {
+//     $('.lacFilter input').change(function () {
+//         // The one that fires the event is always the
+//         // checked one; you don't need to test for this
+//         initFilter();
+//     });
+// });
 
 
 

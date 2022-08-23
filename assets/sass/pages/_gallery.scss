@@ -175,7 +175,7 @@ section.LAC-gallery {
 
                             .lacFilter {
 
-                                margin: 0 15px 15px;
+                                margin: 0px 0px 15px 15px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
@@ -195,6 +195,7 @@ section.LAC-gallery {
                                     letter-spacing: 1.4px;
                                     cursor: pointer;
                                     line-height: 25px;
+                                    width: 100%;
                                 }
                             }
 

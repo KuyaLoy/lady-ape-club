@@ -231,12 +231,12 @@ for( i = 0; i < LacBackground.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacBackground_'+LacBackground[i]+'';
+    label.htmlFor = 'LacBackground_'+[i]+'';
     label.innerHTML = LacBackground[i];
-    input.attr = ("name",LacBackground[i]);
-    input.type = "checkbox";
-    input.val = LacBackground[i];
-    input.id = 'LacBackground_'+LacBackground[i]+'';
+    input.setAttribute("name","LacBackground");
+    input.type = "radio";
+    input.setAttribute("value", LacBackground[i]);
+    input.id = 'LacBackground_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -244,25 +244,25 @@ for( i = 0; i < LacBackground.length; i++ ) {
     document.getElementById('LacBackground').appendChild(div);
 }
 
-for( i = 0; i < LacBackground.length; i++ ) {
+// for( i = 0; i < LacBackground.length; i++ ) {
 
-    var div = document.createElement('div');
-    var label = document.createElement('label');
-    var input = document.createElement('input');
+//     var div = document.createElement('div');
+//     var label = document.createElement('label');
+//     var input = document.createElement('input');
 
-    div.classList.add('lacFilter');
-    label.htmlFor = 'LacBackground_'+LacBackground[i]+'';
-    label.innerHTML = LacBackground[i];
-    input.attr = ("name",LacBackground[i]);
-    input.type = "checkbox";
-    input.val = LacBackground[i];
-    input.id = 'LacBackground_'+LacBackground[i]+'';
+//     div.classList.add('lacFilter');
+//     label.htmlFor = 'LacBackground_'+LacBackground[i]+'';
+//     label.innerHTML = LacBackground[i];
+//     input.setAttribute("name",LacBackground;
+//     input.type = "radio";
+//     input.setAttribute("value", "LacBackground[i];
+//     input.id = 'LacBackground_'+LacBackground[i]+'';
 
-    div.appendChild(label);
-    div.appendChild(input);
+//     div.appendChild(label);
+//     div.appendChild(input);
   
-    document.getElementById('LacBackground').appendChild(div);
-}
+//     document.getElementById('LacBackground').appendChild(div);
+// }
 
 for( i = 0; i < LacClothes.length; i++ ) {
 
@@ -271,12 +271,12 @@ for( i = 0; i < LacClothes.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacClothes_'+LacClothes[i]+'';
+    label.htmlFor = 'LacClothes_'+[i]+'';
     label.innerHTML = LacClothes[i];
-    input.attr = ("name",LacClothes[i]);
-    input.type = "checkbox";
-    input.val = LacClothes[i];
-    input.id = 'LacClothes_'+LacClothes[i]+'';
+    input.setAttribute("name","LacClothes");
+    input.type = "radio";
+    input.setAttribute("value", LacClothes[i]);
+    input.id = 'LacClothes_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -291,12 +291,12 @@ for( i = 0; i < LacEarring.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacEarring_'+LacEarring[i]+'';
+    label.htmlFor = 'LacEarring_'+[i]+'';
     label.innerHTML = LacEarring[i];
-    input.attr = ("name",LacEarring[i]);
-    input.type = "checkbox";
-    input.val = LacEarring[i];
-    input.id = 'LacEarring_'+LacEarring[i]+'';
+    input.setAttribute("name","LacEarring");
+    input.type = "radio";
+    input.setAttribute("value", LacEarring[i]);
+    input.id = 'LacEarring_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -311,12 +311,12 @@ for( i = 0; i < LacNecklace.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacNecklace_'+LacNecklace[i]+'';
+    label.htmlFor = 'LacNecklace_'+[i]+'';
     label.innerHTML = LacNecklace[i];
-    input.attr = ("name",LacNecklace[i]);
-    input.type = "checkbox";
-    input.val = LacNecklace[i];
-    input.id = 'LacNecklace_'+LacNecklace[i]+'';
+    input.setAttribute("name","LacNecklace");
+    input.type = "radio";
+    input.setAttribute("value", LacNecklace[i]);
+    input.id = 'LacNecklace_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -331,12 +331,12 @@ for( i = 0; i < LacEyes.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacEyes_'+LacEyes[i]+'';
+    label.htmlFor = 'LacEyes_'+[i]+'';
     label.innerHTML = LacEyes[i];
-    input.attr = ("name",LacEyes[i]);
-    input.type = "checkbox";
-    input.val = LacEyes[i];
-    input.id = 'LacEyes_'+LacEyes[i]+'';
+    input.setAttribute("name","LacEyes");
+    input.type = "radio";
+    input.setAttribute("value", LacEyes[i]);
+    input.id = 'LacEyes_'+[i]+' filter-eyes';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -351,12 +351,12 @@ for( i = 0; i < LacMouth.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacMouth_'+LacMouth[i]+'';
+    label.htmlFor = 'LacMouth_'+[i]+'';
     label.innerHTML = LacMouth[i];
-    input.attr = ("name",LacMouth[i]);
-    input.type = "checkbox";
-    input.val = LacMouth[i];
-    input.id = 'LacMouth_'+LacMouth[i]+'';
+    input.setAttribute("name","LacMouth");
+    input.type = "radio";
+    input.setAttribute("value",LacMouth[i]);
+    input.id = 'LacMouth_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -371,12 +371,12 @@ for( i = 0; i < LacGlasses.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacGlasses_'+LacGlasses[i]+'';
+    label.htmlFor = 'LacGlasses_'+[i]+'';
     label.innerHTML = LacGlasses[i];
-    input.attr = ("name",LacGlasses[i]);
-    input.type = "checkbox";
-    input.val = LacGlasses[i];
-    input.id = 'LacGlasses_'+LacGlasses[i]+'';
+    input.setAttribute("name","LacGlasses");
+    input.type = "radio";
+    input.setAttribute("value", LacGlasses[i]);
+    input.id = 'LacGlasses_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -391,12 +391,12 @@ for( i = 0; i < LacFur.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacFur_'+LacFur[i]+'';
+    label.htmlFor = 'LacFur_'+[i]+'';
     label.innerHTML = LacFur[i];
-    input.attr = ("name",LacFur[i]);
-    input.type = "checkbox";
-    input.val = LacFur[i];
-    input.id = 'LacFur_'+LacFur[i]+'';
+    input.setAttribute("name","LacFur");
+    input.type = "radio";
+    input.setAttribute("value", LacFur[i]);
+    input.id = 'LacFur_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
@@ -411,12 +411,12 @@ for( i = 0; i < LacHair.length; i++ ) {
     var input = document.createElement('input');
 
     div.classList.add('lacFilter');
-    label.htmlFor = 'LacHair_'+LacHair[i]+'';
+    label.htmlFor = 'LacHair_'+[i]+'';
     label.innerHTML = LacHair[i];
-    input.attr = ("name",LacHair[i]);
-    input.type = "checkbox";
-    input.val = LacHair[i];
-    input.id = 'LacHair_'+LacHair[i]+'';
+    input.setAttribute("name","LacHair");
+    input.type = "radio";
+    input.setAttribute("value", LacHair[i]);
+    input.id = 'LacHair_'+[i]+'';
 
     div.appendChild(label);
     div.appendChild(input);
