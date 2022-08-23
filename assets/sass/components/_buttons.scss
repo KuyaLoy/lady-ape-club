@@ -31,9 +31,9 @@
     
 
     &:hover {
-        color: u.$white-plain;
-        border: 1px solid u.$primary-color;
-        background-color: transparent;
+        color: u.$black-plain;
+        //border: 1px solid u.$primary-color;
+        //background-color: transparent;
         transition: all 500ms;
     }
 }
@@ -42,8 +42,8 @@
     border: 1px solid u.$primary-color;
 
     &:hover {
-        color: u.$black-plain;
-        background-color: u.$primary-color;
+        color: u.$primary-color;
+        //background-color: u.$primary-color;
         border: 1px solid u.$primary-color;
         transition: all 500ms;
     }

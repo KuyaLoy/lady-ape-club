@@ -14,6 +14,8 @@ AOS.init({
 var prevScrollpos = window.pageYOffset;
 var minTop = 140;
 
+
+
 if(prevScrollpos > minTop) {
 
   $(".navApe").css( {
@@ -27,17 +29,28 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 
   if (currentScrollPos > prevScrollpos) {
-    if(currentScrollPos > minTop) {
-      $(".navApe").css( {
-        "top":"-140px"
-      }); 
+    if(currentScrollPos > 30) {
+
+
+      if(window.innerWidth < 900) {
+        $(".navApe").css( {
+          "top":"-100px"
+        }); 
+      } else {
+        $(".navApe").css( {
+          "top":"-140px"
+        }); 
+      }
+      
+
+
       $("#scrollToTop").css({'display':'flex'});
     } 
   } else {
     $(".navApe").css( {
       "top":"0px"
     }); 
-    if(currentScrollPos > minTop) {
+    if(currentScrollPos > 10) {
       $(".navApe").css( {
         "background":"#00000030",
     "backdrop-filter":"blur(5px)"
@@ -60,10 +73,12 @@ function myTimeout() {
   $('.navApe__cont__list').removeClass('open');
 }
 function myTimeout2() {
-  $(".navApe").css( {
-    "background":"#00000030",
-    "backdrop-filter":"blur(5px)"
-  }); 
+  if(prevScrollpos > 100) {
+    $(".navApe").css( {
+      "background":"#00000030",
+      "backdrop-filter":"blur(5px)"
+    });
+  }
 }
 function menuToggle() {
   
@@ -136,13 +151,15 @@ function openRoadmap(el) {
   $('body').addClass('overflow-hidden');
 } 
 
-$(document).mouseup(function(e) 
-{
+$(document).mouseup(function(e) {
     var container = $(".roadmap-popup .content");
-
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
-      closeRoadmap();
+    // if the target of the click isn't the container nor a descendant of the 
+    if($('.navApe__cont__list').hasClass('open')) {
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        closeRoadmap();
+      }
     }
 });
+
+
+// json mapping

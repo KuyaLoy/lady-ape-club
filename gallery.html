@@ -44,14 +44,14 @@
 	<nav class="navApe">
 		<div class="navApe__cont">
 			<picture class="navApe__cont__logo">
-				<a href="index.html">
+				<a href="home.html">
 					<img src="./assets/images/logo/logo.png" alt="Lady Ape Club Logo" width="200" />
 				</a>
 			</picture>
 			<ul class="navApe__cont__list">
-				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Home">Buy Lady Ape</a></li>
-				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Team">Team</a></li>
-				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#LAC-Roadmap">Roadmap</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="home.html">Buy Lady Ape</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="home.html#LAC-Team">Team</a></li>
+				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="home.html#LAC-Roadmap">Roadmap</a></li>
 				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Gallery</a></li>
 				<li class="navApe__cont__list__item"><a onclick="closeMenu()" href="#!">Members</a></li>
 				<span class="close-menu" onclick="menuToggle()">
@@ -93,379 +93,268 @@
 					</div>
 					<input type="search" placeholder="By ID">
 
+					<div class="special-checkbox">
+						<label class="switch">
+							Special
+							<input type="checkbox" value="SPECIAL" id="checkbox" />
+							<div class="slider round"></div>
+						</label>
+					</div>
+
 					<div class="lac-filter-accordian">
 						
 						<div class="adj-col">
 							<button class="accordion">Background</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Orange">Orange</label>
+								<label><input type="checkbox" value="Yellow">Yellow</label>
+								<label><input type="checkbox" value="Gray">Gray</label>
+								<label><input type="checkbox" value="Army Green">Army Green</label>
+								<label><input type="checkbox" value="New Punk Blue">New Punk Blue</label>
+								<label><input type="checkbox" value="Aquamarine">Aquamarine</label>
+								<label><input type="checkbox" value="Purple">Purple</label>
+								<label><input type="checkbox" value="Blue">Blue</label>
 							</div>
 
-							<button class="accordion">Mouth</button>
+							<button class="accordion">Clothes</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
-							</div>
-						</div>
-
-						<div class="adj-col">
-							<button class="accordion">Mouth</button>
-							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
-							</div>
-
-							<button class="accordion">Eyes</button>
-							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Black Jacket">Black Jacket</label>
+								<label><input type="checkbox" value="Rider Jacket">Rider Jacket</label>
+								<label><input type="checkbox" value="Stunt Jacket">Stunt Jacket</label>
+								<label><input type="checkbox" value="Yellow Jacket">Yellow Jacket</label>
+								<label><input type="checkbox" value="Leopard Jacket">Leopard Jacket</label>
+								<label><input type="checkbox" value="Blue Tweed Jacket">Blue Tweed Jacket</label>
+								<label><input type="checkbox" value="Black Turtleneck">Black Turtleneck</label>
+								<label><input type="checkbox" value="Belted Tank Top">Belted Tank Top</label>
+								<label><input type="checkbox" value="Black Tank Top">Black Tank Top</label>
+								<label><input type="checkbox" value="Noodle Strap Top">Noodle Strap Top</label>
+								<label><input type="checkbox" value="Military Sleeveless Top">Military Sleeveless Top</label>
+								<label><input type="checkbox" value="Logo Vintage T-shirt">Logo Vintage T-shirt</label>
+								<label><input type="checkbox" value="Sailor T-shirt">Sailor T-shirt</label>
+								<label><input type="checkbox" value="Skull T-shirt">Skull T-shirt</label>
+								<label><input type="checkbox" value="Check Collar T-shirt">Check Collar T-shirt</label>
+								<label><input type="checkbox" value="Silver T-shirt">Silver T-shirt</label>
+								<label><input type="checkbox" value="Lac Black T-shirt">Lac Black T-shirt</label>
+								<label><input type="checkbox" value="Brown Chess Shirt">Brown Chess Shirt</label>
+								<label><input type="checkbox" value="Vietnam Shirt">Vietnam Shirt</label>
+								<label><input type="checkbox" value="Stone Robe">Stone Robe</label>
+								<label><input type="checkbox" value="Geometric Pattern Blouse">Geometric Pattern Blouse</label>
+								<label><input type="checkbox" value="Bustier Dress">Bustier Dress</label>
+								<label><input type="checkbox" value="Unbalanced Ribbon Dress">Unbalanced Ribbon Dress</label>
+								<label><input type="checkbox" value="Olivia Dress">Olivia Dress</label>
+								<label><input type="checkbox" value="Madonna Dress">Madonna Dress</label>
+								<label><input type="checkbox" value="Admirals Coat">Admirals Coat</label>
+								<label><input type="checkbox" value="Flamingo Fur Coat">Flamingo Fur Coat</label>
+								<label><input type="checkbox" value="Jacquard Coat">Jacquard Coat</label>
+								<label><input type="checkbox" value="Space Suit">Space Suit</label>
+								<label><input type="checkbox" value="Vintage Neck Pole">Vintage Neck Pole</label>
+								<label><input type="checkbox" value="Golf Collar Tee">Golf Collar Tee</label>
+								<label><input type="checkbox" value="Lac Red T-shirt">Lac Red T-shirt</label>
+								<label><input type="checkbox" value="Gold Jacket">Gold Jacket</label>
+								<label><input type="checkbox" value="Flower Shirt">Flower Shirt</label>
+								<label><input type="checkbox" value="Blue Striped T-shirt">Blue Striped T-shirt</label>
+								<label><input type="checkbox" value="Bikini">Bikini</label>
+								<label><input type="checkbox" value="Tie-Dye">Tie-dye</label>
+								<label><input type="checkbox" value="Sea Dress">Sea Dress</label>
+								<label><input type="checkbox" value="Riding Vest">Riding Vest</label>
+								<label><input type="checkbox" value="Red Cloth Jacket">Red Cloth Jacket</label>
+								<label><input type="checkbox" value="Rainbow Belt">Rainbow Belt</label>
+								<label><input type="checkbox" value="Ornament Pattern Bomber">Ornament Pattern Bomber</label>
+								<label><input type="checkbox" value="Off The Shoulder">Off The Shoulder</label>
+								<label><input type="checkbox" value="Nurse Jacket">Nurse Jacket</label>
+								<label><input type="checkbox" value="School Uniform">School Uniform</label>
 							</div>
 						</div>
 
 						
 						<div class="adj-col">
-							<button class="accordion">Fur</button>
+							<button class="accordion">Earring</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Dot Earrings">Dot Earrings</label>
+								<label><input type="checkbox" value="H Earrings">H Earrings</label>
+								<label><input type="checkbox" value="Sapphire Earrings">Sapphire Earrings</label>
+								<label><input type="checkbox" value="Aquamarine Earrings">Aquamarine Earrings</label>
+								<label><input type="checkbox" value="Bone Earrings">Bone Earrings</label>
+								<label><input type="checkbox" value="Emerald Earrings">Emerald Earrings</label>
+								<label><input type="checkbox" value="Square Aquamarine Earrings">Square Aquamarine Earrings</label>
+								<label><input type="checkbox" value="Flower Pearl Earrings">Flower Pearl Earrings</label>
+								<label><input type="checkbox" value="Silver Three Earrings">Sliver Three Earrings</label>
+								<label><input type="checkbox" value="Silver Logo Earrings">Silver Logo Earrings</label>
+								<label><input type="checkbox" value="Silver Ball Earrings">Silver Ball Earrings</label>
+								<label><input type="checkbox" value="Silver Feathering">Silver Feathering</label>
+								<label><input type="checkbox" value="Shield Earrings">Shield Earrings</label>
+								<label><input type="checkbox" value="Gold Logo Earrings">Gold Logo Earrings</label>
+								<label><input type="checkbox" value="Gold Three Earrings">Gold Three Earrings</label>
+								<label><input type="checkbox" value="Gold Flower Earrings">Gold Flower Earrings</label>
+								<label><input type="checkbox" value="Gold Cross Earrings">Gold Cross Earrings</label>
+								<label><input type="checkbox" value="Gold Ball Earrings">Gold Ball Earrings</label>
+								<label><input type="checkbox" value="Ornament Scarf Earrings">Ornament Scarf Earrings</label>
+								<label><input type="checkbox" value="Lucxury Earrings">Lucxury Earrings</label>
+								<label><input type="checkbox" value="Pink Long Earrings">Pink Long Earrings</label>
+								<label><input type="checkbox" value="Lucifer Earcuff">Lucifer Earcuff</label>
+								<label><input type="checkbox" value="Can Lid Earrings">Can Lid Earrings</label>
+								<label><input type="checkbox" value="Blue Diamond Earrings">Blue Diamond Earrings</label>
+								<label><input type="checkbox" value="Clip Ring Earrings">Clip Ring Earrings</label>
+								<label><input type="checkbox" value="Big Silver Earrings">Big Silver Earrings</label>
+								<label><input type="checkbox" value="Ceylon Blue Earrings">Ceylon Blue Earrings</label>
+								<label><input type="checkbox" value="Blue India Earrings">Blue India Earrings</label>
 							</div>
 
-							<button class="accordion">Clothes</button>
+							<button class="accordion">Necklace</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Triple Gold Necklace">Triple Gold Necklace</label>
+								<label><input type="checkbox" value="Medusa Pendant Necklace">Medusa Pendant Necklace</label>
+								<label><input type="checkbox" value="Pearl Flower Necklace">Pearl Flower Necklace</label>
+								<label><input type="checkbox" value="Divas Dream Necklace">Divas Dream Necklace</label>
+								<label><input type="checkbox" value="Tricolor Pattern Choke">Tricolor Pattern Choke</label>
+								<label><input type="checkbox" value="Bag Pendant Necklace">Bag Pendant Necklace</label>
+								<label><input type="checkbox" value="Gold Pendant Necklace">Gold Pendant Necklace</label>
+								<label><input type="checkbox" value="Chandal Pendant">Chandal Pendant</label>
+								<label><input type="checkbox" value="H Necklace">H Necklace</label>
+								<label><input type="checkbox" value="Silver Tennis Necklace">Silver Tennis Necklace</label>
+								<label><input type="checkbox" value="Tricolor Pearl Flower Necklace">Tricolor Pearl Flower Necklace</label>
+								<label><input type="checkbox" value="Leopard Scarf">Leopard Scarf</label>
+								<label><input type="checkbox" value="Goldpink Choke">Goldpink Choke</label>
+								<label><input type="checkbox" value="Gold Pet Necklace">Gold Pet Necklace</label>
+								<label><input type="checkbox" value="Gold Cross Necklace">Gold Cross Necklace</label>
+								<label><input type="checkbox" value="Belt Choke">Belt Choke</label>
+								<label><input type="checkbox" value="Cube Necklace">Cube Necklace</label>
 							</div>
 						</div>
 
 						<div class="adj-col">
-							<button class="accordion">Necklace</button>
+							<button class="accordion">Eyes</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Laser">Laser</label>
+								<label><input type="checkbox" value="Wink">Wink</label>
+								<label><input type="checkbox" value="Sorry">Sorry</label>
+								<label><input type="checkbox" value="Sad">Sad</label>
+								<label><input type="checkbox" value="Bored">Bored</label>
+								<label><input type="checkbox" value="Oops">Oops</label>
+								<label><input type="checkbox" value="Coin">Coin</label>
+								<label><input type="checkbox" value="X">X</label>
+								<label><input type="checkbox" value="Zombie">Zombie</label>
+								<label><input type="checkbox" value="Sleepy">Sleepy</label>
+								<label><input type="checkbox" value="Red Beams">Red Beams</label>
+								<label><input type="checkbox" value="Cyborg">Cyborg</label>
+								<label><input type="checkbox" value="Crazy">Crazy</label>
+								<label><input type="checkbox" value="Closed">Closed</label>
+								<label><input type="checkbox" value="Angry">Angry</label>
+								<label><input type="checkbox" value="All Night">All Night</label>
 							</div>
 
-							<button class="accordion">Head</button>
+							<button class="accordion">Mouth</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Boring">Boring</label>
+								<label><input type="checkbox" value="Tongue">Tongue</label>
+								<label><input type="checkbox" value="Surprised">Surprised</label>
+								<label><input type="checkbox" value="Emotion">Emotion</label>
+								<label><input type="checkbox" value="Cigarette">Cigarette</label>
+								<label><input type="checkbox" value="Pizza">Pizza</label>
+								<label><input type="checkbox" value="Bubble Gum">Bubble Gum</label>
+								<label><input type="checkbox" value="Wide Smile">Wide Smile</label>
+								<label><input type="checkbox" value="Yummy">Yummy</label>
+								<label><input type="checkbox" value="Chu">Chu</label>
+								<label><input type="checkbox" value="Yawn">Yawn</label>
+								<label><input type="checkbox" value="Whistle">Whistle</label>
+								<label><input type="checkbox" value="Suppress">Suppress</label>
+								<label><input type="checkbox" value="Discomfort">Discomfort</label>
+								<label><input type="checkbox" value="Silence">Silence</label>
+								<label><input type="checkbox" value="Cigar">Cigar</label>
+								<label><input type="checkbox" value="Mustache Cigarette">Mustache Cigarette</label>
+								<label><input type="checkbox" value="Pipe">Pipe</label>
+								<label><input type="checkbox" value="Rose">Rose</label>
+								<label><input type="checkbox" value="Thermometer">Thermometer</label>
+								<label><input type="checkbox" value="Ice">Ice</label>
+								<label><input type="checkbox" value="Gold">Gold</label>
+								<label><input type="checkbox" value="Rainbow">Rainbow</label>
 							</div>
 						</div>
 
 						<div class="adj-col">
 							<button class="accordion">Glasses</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Zigzag Point Sunglasses">Zigzag Point Sunglasses</label>
+								<label><input type="checkbox" value="Turbid Glass">Turbid Glass</label>
+								<label><input type="checkbox" value="Snow Goggles">Snow Goggles</label>
+								<label><input type="checkbox" value="Silverrimmed Glasses">Silverrimmed Glasses</label>
+								<label><input type="checkbox" value="Red & Blue Sunglasses">Red & Blue Sunglasses</label>
+								<label><input type="checkbox" value="Holographic">Holographic</label>
+								<label><input type="checkbox" value="Blind">Blind</label>
+								<label><input type="checkbox" value="Black Eyepatch">Black Eyepatch</label>
+								<label><input type="checkbox" value="Blackpink Eyepatch">Blackpink Eyepatch</label>
 							</div>
 						
-							<button class="accordion">Earring</button>
+							<button class="accordion">Fur</button>
 							<div class="accordion-content">
-								<label>
-									Orange
-									<input type="checkbox" value="Orange">
-								</label>
-								<label>
-									Yellow
-									<input type="checkbox" value="Yellow">
-								</label>
-								<label>
-									Gray
-									<input type="checkbox" value="Gray">
-								</label>
-								<label>
-									Army Green
-									<input type="checkbox" value="Army Green">
-								</label>
-								<label>
-									New Punk Blue
-									<input type="checkbox" value="New Punk Blue">
-								</label>
-								<label>
-									Aquamarine
-									<input type="checkbox" value="Aquamarine">
-								</label>
-								<label>
-									Purple
-									<input type="checkbox" value="Purple">
-								</label>
-								<label>
-									Blue
-									<input type="checkbox" value="Blue">
-								</label>
+								<label><input type="checkbox" value="Black">Black</label>
+								<label><input type="checkbox" value="Golden Brown">Golden Brown</label>
+								<label><input type="checkbox" value="Dark Brown">Dark Brown</label>
+								<label><input type="checkbox" value="Cream">Cream</label>
+								<label><input type="checkbox" value="Brown">Brown</label>
+								<label><input type="checkbox" value="Blue">Blue</label>
+								<label><input type="checkbox" value="White">White</label>
+								<label><input type="checkbox" value="Tan">Tan</label>
+								<label><input type="checkbox" value="Red">Red</label>
+								<label><input type="checkbox" value="Gray">Gray</label>
+								<label><input type="checkbox" value="Pink">Pink</label>
+								<label><input type="checkbox" value="Noise">Noise</label>
+								<label><input type="checkbox" value="Solid Gold">Solid Gold</label>
+								<label><input type="checkbox" value="Robot">Robot</label>
+								<label><input type="checkbox" value="Plasma">Plasma</label>
+								<label><input type="checkbox" value="Chaos">Chaos</label>
+								<label><input type="checkbox" value="Cheetah">Cheetah</label>
+								<label><input type="checkbox" value="Zombie">Zombie</label>
+							</div>
+						</div>
+						<div class="adj-col">
+							<button class="accordion">Fur</button>
+							<div class="accordion-content">
+								<label><input type="checkbox" value="">HEAD</label>
+								<label><input type="checkbox" value="Brown Straight Hair">Brown Straight Hair</label>
+								<label><input type="checkbox" value="Pink Straight Hair">Pink Straight Hair</label>
+								<label><input type="checkbox" value="White Straight Hair">White Straight Hair</label>
+								<label><input type="checkbox" value="Pink Ponytail">Pink Ponytail</label>
+								<label><input type="checkbox" value="Gray Ponytail">Gray Ponytail</label>
+								<label><input type="checkbox" value="Red Ponytail">Red Ponytail</label>
+								<label><input type="checkbox" value="Fez Hat">Fez Hat</label>
+								<label><input type="checkbox" value="Ribbon Hairpin">Ribbon Hairpin</label>
+								<label><input type="checkbox" value="Chain Cap">Chain Cap</label>
+								<label><input type="checkbox" value="Party Hat">Party Hat</label>
+								<label><input type="checkbox" value="Brown Sun Cap">Brown Sun Cap</label>
+								<label><input type="checkbox" value="Wedding Veil">Wedding Veil</label>
+								<label><input type="checkbox" value="Blue Bandana">Blue Bandana</label>
+								<label><input type="checkbox" value="Blackfur Snapback">Blackfur Snapback</label>
+								<label><input type="checkbox" value="Silver Point Snapback">Silver Point Snapback</label>
+								<label><input type="checkbox" value="Navy Tidy Hair">Navy Tidy Hair</label>
+								<label><input type="checkbox" value="Brown Tidy Hair">Brown Tidy Hair</label>
+								<label><input type="checkbox" value="Blonde Madonna Hair">Blonde Madonna Hair</label>
+								<label><input type="checkbox" value="Pink Madonna Hair">Pink Madonna Hair</label>
+								<label><input type="checkbox" value="Bunny Headband">Bunny Headband</label>
+								<label><input type="checkbox" value="Lac Snapback Black">Lac Snapback Black</label>
+								<label><input type="checkbox" value="Horns">Horns</label>
+								<label><input type="checkbox" value="Green Short Hair">Green Short Hair</label>
+								<label><input type="checkbox" value="Army Hat">Army Hat</label>
+								<label><input type="checkbox" value="Halo">Halo</label>
+								<label><input type="checkbox" value="White Helmet">White Helmet</label>
+								<label><input type="checkbox" value="Beanie">Beanie</label>
+								<label><input type="checkbox" value="Beret">Beret</label>
+								<label><input type="checkbox" value="Elegant Hat">Elegant Hat</label>
+								<label><input type="checkbox" value="Graceful Lady">Graceful Lady</label>
+								<label><input type="checkbox" value="Ice Cream">Ice Cream</label>
+								<label><input type="checkbox" value="Laurel Wreath">Laurel Wreath</label>
+								<label><input type="checkbox" value="Queens Crown">Queens Crown</label>
 							</div>
 						</div>
 					</div>
+
+					<button type="button" class="filter-button">FILTER</button>
+
+					<span class="close-menu" onclick="filterMobilerSlide()" style="display: none;">
+						<picture>
+							<img src="./assets/images/icons/white-close.svg" alt="close">
+						</picture>
+					</span>
 
 				</section>
 			</aside>
@@ -475,7 +364,7 @@
 					<div class="filter-inner">
 						<input type="search" placeholder="search">
 						<span>
-							<div class="filter-mobile">filter <picture><img src="./assets/images/icons/sort-down.svg" alt="lac sort"></picture></div>
+							<div class="filter-mobile" onclick="filterMobilerSlide();">filter <picture><img src="./assets/images/icons/sort-down.svg" alt="lac sort"></picture></div>
 							<div>
 								sort by
 								<picture>
@@ -494,246 +383,12 @@
 				</header>
 				
 				<ul id="list-lac-nft" class="gallery-cont">
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
+					<!-- <li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
 						<a href="#!">
 							<img src="./assets/images/lac-nft/0.png" alt="01">
 						</a>
 						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
-					<li data-num="1" data-background="Orange" data-mouth="Tongue" data-fur="Tan" data-clothes="Black Jacket" data-necklace="Triple Gold Necklace" data-glasses="Black Eyepatch" data-head="Horns" data-earring="Lucifer Earcuff" data-eyes="Wink">
-						<a href="#!">
-							<img src="./assets/images/lac-nft/0.png" alt="01">
-						</a>
-						<p>Lady Apes #4921</p>
-					</li>
+					</li> -->
 				</ul>
 			</section>
 		</main>
@@ -755,6 +410,10 @@
 		<p class="copyright">&copy; <a href="#!">TNC ART</a></p>
 	</footer>
 
+	<div class="loader-wrapper hide">
+		<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+	</div>
+
 	<audio id="player" loop autoplay>
 		<source src="./assets/audio/Bgm.mp3" type="audio/mp3">
 		<source src="./assets/audio/Bgm.org" type="audio/org">
@@ -763,8 +422,9 @@
 	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="./node_modules/aos/dist/aos.js"></script>
+	<script src="./assets/js/gallery.js"></script>
+	<script src="./assets/js/gallery-data.js"></script>
 	<script src="./assets/js/script.js"></script>
-	<script src="./assets/js/gallery-filter-accordian.js"></script>
 </body>
 
 </html>

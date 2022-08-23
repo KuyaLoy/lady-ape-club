@@ -5,7 +5,11 @@ section.LAC-gallery {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: u.rem(140) u.rem(20);
+    padding: u.rem(140) u.rem(20);
+
+    @include u.breakpoint-max(medium) {
+        padding: u.rem(100) u.rem(20);
+    }
 
     main {
         width: min(100%, 1366px);
@@ -18,88 +22,21 @@ section.LAC-gallery {
             grid-template-columns: 230px 1fr;
         }
 
-        aside {
-            
+        aside.main-filter {
+
             section {
-                .lac-filter-accordian {
-    
-                    margin-top: 25px;
-    
-                    button.accordion {
-                        width: 100%;
-                        background: transparent;
-                        border: none;
-                        outline: none;
-                        text-align: left;
-                        padding: 7.5px 0px;
-                        font-size: 16px;
-                        letter-spacing: 1.6px;
-                        color: white;
-                        font-family: "Gilroy-Regular";
-                        cursor: pointer;
-                        transition: background-color 0.2s linear;
-    
-                        &::after {
-                            font-family: FontAwesome;
-                            content: "\f150";
-                            font-family: "fontawesome";
-                            font-size: 18px;
-                            float: right;
-                        }
-    
-                        &.is-open {
-                            &::after {
-                                content: "\f151";
-                            }
-                        }
-                        &:hover, &.is-open {
-                            font-family: "Gilroy-Bold";
-                            border-bottom: 1px solid #878787;
-                        }
-                    }
-                    .accordion-content {
-                        
-                        padding: 0;
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: max-height 0.2s ease-in-out;
-    
-                        label {
-                            display: flex;
-                            padding: 7.5px 0 7.5px 7.5px;
-                            color: #B2B2B2;
-                            align-items: center;
-                            justify-content: space-between;
-                            font-size: 14px;
-                            font-family: "Gilroy-Regular";
-                            letter-spacing: 1.4px;
-                            cursor: pointer;
-    
-                            &:first-child {
-                                padding-top: 15px;
-                            } 
-                            &:last-child {
-                                padding-bottom: 15px;
-                            }
-    
-                            // input[type=checkbox] {
-                            //     visibility: hidden;
-                            // }
-                        }
-                      }
-                }
-    
+
                 .filter-title {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    
+
                     p {
                         color: #FFD45E;
                         font-family: 'Gilroy-Bold';
                         letter-spacing: 1.8px;
                     }
-    
+
                     span {
                         color: #878787;
                         font-size: 14px;
@@ -108,7 +45,7 @@ section.LAC-gallery {
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-    
+
                         img {
                             width: 16px;
                             height: 16px;
@@ -116,7 +53,7 @@ section.LAC-gallery {
                         }
                     }
                 }
-    
+
                 input[type=search] {
                     margin-top: 30px;
                     width: 100%;
@@ -130,10 +67,162 @@ section.LAC-gallery {
                     color: #878787;
                     border: 1px solid #878787;
                 }
+                
+                .special-checkbox {
+
+                    margin-top: 25px;
+                    font-size: 16px;
+                    letter-spacing: 1.6px;
+                    color: #fff;
+                    font-family: "Gilroy-Regular";
+                    width: 100%;
+
+                    .switch {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        position: relative;
+                        cursor: pointer;
+                        
+                        input {
+                            display:none;
+
+                            &:checked + .slider:before {
+                                transform: translateX(8px);
+                                background-color: #ffd45e;
+                            }
+                        }
+
+                        .slider {
+                            transition: .4s;
+                            border: 1px solid #707070;
+                            width: 30px;
+                            height: 16px;
+                            position: relative;
+
+                            &:before {
+                                background-color: #fff;
+                                bottom: 1px;
+                                content: "";
+                                height: 12px;
+                                left: 4px;
+                                position: absolute;
+                                transition: .4s;
+                                width: 12px;
+                            }
+
+                            &.round {
+                                border-radius: 34px;
+
+                                &:before {
+                                    border-radius: 50%;
+                                  }
+                            }
+                        }
+                      }
+                }
+
+                .lac-filter-accordian {
+                    margin-top: 10px;
+
+                    .adj-col {
+                        button.accordion {
+                            width: 100%;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            text-align: left;
+                            padding: 7.5px 0px;
+                            font-size: 16px;
+                            letter-spacing: 1.6px;
+                            color: white;
+                            font-family: "Gilroy-Regular";
+                            cursor: pointer;
+                            transition: background-color 0.2s linear;
+                            position: relative;
+
+                            &::after {
+                                content: " ";
+                                height: 16px;
+                                width: 16px;
+                                right: 0;
+                                position: absolute;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-image: url(../images/icons/white-arrow-down.svg);
+                            }
+
+                            &.is-open {
+                                &::after {
+                                    background-image: url(../images/icons/white-arrow-up.svg);
+                                }
+                            }
+
+                            &:hover,
+                            &.is-open {
+                                //font-family: "Gilroy-Bold";
+                                border-bottom: 1px solid #878787;
+                            }
+                        }
+
+                        .accordion-content {
+
+                            padding: 0;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.2s ease-in-out;
+
+                            label {
+                                display: flex;
+                                padding: 7.5px 0 7.5px 7.5px;
+                                color: #B2B2B2;
+                                align-items: center;
+                                justify-content: space-between;
+                                font-size: 14px;
+                                font-family: "Gilroy-Regular";
+                                letter-spacing: 1.4px;
+                                cursor: pointer;
+                                flex-direction: row-reverse;
+
+                                &:first-child {
+                                    padding-top: 15px;
+                                }
+
+                                &:last-child {
+                                    padding-bottom: 15px;
+                                }
+
+                                // input[type=checkbox] {
+                                //     visibility: hidden;
+                                // }
+                            }
+                        }
+                    }
+
+                }
+
+
+
+                button.filter-button {
+                    margin-top: 10px;
+                    width: 100%;
+                    background: #FFD45E;
+                    outline: none;
+                    border: #FFD45E 1px solid;
+                    font-size: 16px;
+                    letter-spacing: 1.6px;
+                    font-family: 'Gilroy-Regular';
+                    padding: 10px 20px;
+                    margin-top: 40px;
+                    border-radius: 6px;
+                }
+                
             }
         }
+
         @include u.breakpoint-max(medium) {
-            aside.main-filter {
+            aside.main-filter.mobile {
                 /* display: flex; */
                 position: absolute;
                 background: #000000b0;
@@ -143,7 +232,7 @@ section.LAC-gallery {
                 top: 0;
                 left: 0;
                 z-index: 3;
-                display: flex;
+                display: none;
                 align-items: center;
                 justify-content: center;
                 padding: 20px;
@@ -152,10 +241,10 @@ section.LAC-gallery {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    max-height: 80%;
+                    max-height: 90%;
                     overflow: auto;
 
-                    width: 80%;
+                    width: 90%;
 
                     .filter-title {
 
@@ -163,13 +252,13 @@ section.LAC-gallery {
                         align-items: center;
                         justify-content: space-between;
                         width: 100%;
-                        
+
                         p {
                             color: #FFD45E;
                             font-family: 'Gilroy-Bold';
                             letter-spacing: 1.8px;
                         }
-    
+
                         span {
                             color: #878787;
                             font-size: 14px;
@@ -178,7 +267,7 @@ section.LAC-gallery {
                             display: flex;
                             align-items: center;
                             cursor: pointer;
-    
+
                             img {
                                 width: 16px;
                                 height: 16px;
@@ -194,6 +283,19 @@ section.LAC-gallery {
                         grid-column-gap: 20px;
                         grid-row-gap: 0px;
                         width: 100%;
+                    }
+
+                    .close-menu {
+                        display: block !important;
+                        position: absolute;
+                        top: 1.25rem;
+                        right: 1.25rem;
+                        height: 2rem;
+                        width: 2rem;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        cursor: pointer;
                     }
                 }
             }
@@ -316,7 +418,7 @@ section.LAC-gallery {
                                     transition: ease all 300ms;
 
                                     &:hover {
-                                        background: white;
+                                        background: #ACACAC;
                                         color: #303030;
                                     }
 
@@ -353,9 +455,11 @@ section.LAC-gallery {
                 @include u.breakpoint-min(medium) {
                     grid-template-columns: repeat(4, 1fr);
                 }
+
                 @include u.breakpoint-min(large) {
                     grid-template-columns: repeat(3, 1fr);
                 }
+
                 @include u.breakpoint-min(xlarge) {
                     grid-template-columns: repeat(4, 1fr);
                 }
@@ -363,17 +467,18 @@ section.LAC-gallery {
                 li {
                     border-radius: 6px;
                     padding: 16px 16px 25px;
-                    border: #FFD45E 1px solid;
+                    border: #ACACAC 1px solid;
                     cursor: pointer;
                     transition: transform .2s;
                     text-align: center;
 
                     @include u.breakpoint-min(medium) {
                         &:hover {
-                            transform: scale(1.05);
+                            //transform: scale(1.05);
+                            border: #FFD45E 1px solid;
                         }
                     }
-                    
+
                     a {
                         display: block;
 
@@ -388,10 +493,12 @@ section.LAC-gallery {
                                 width: 140px;
                                 height: 140px;
                             }
+
                             @media (min-width: 1200px) {
                                 width: 200px;
                                 height: 200px;
                             }
+
                             @include u.breakpoint-min(xlarge) {
                                 border-radius: 12px;
                                 width: 223px;
@@ -399,6 +506,7 @@ section.LAC-gallery {
                             }
                         }
                     }
+
                     p {
                         font-family: "Gilroy-Bold";
                         font-size: u.rem(12);
