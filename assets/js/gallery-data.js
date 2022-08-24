@@ -35,7 +35,9 @@ fetch(`./assets/json/meta.json`)
 	});
 
 function filter() {
+
 	var meta = isFilter ? filterData : metaData;
+	$(".Gallery-title span").html("/ "+meta.length);
 	meta = meta.slice(start, end);
 	//console.log(meta, "here");
 
@@ -142,24 +144,101 @@ function filter() {
 	});
 }
 
+// function initFilterSearch() {
+
+// 	let id = $("#searchById").val();
+// 	let LAC = $("#searchByLac").val();
+
+// 	filterData = metaData
+// 		.filter(function (item) {
+// 			if (id && item.name !== id) {
+// 				return false;
+// 			}
+// 			if (LAC && item.name !== LAC) {
+// 				return false;
+// 			}
+// 			return true;
+// 		})
+// 		.sort(function (a, b) {
+// 			a = +a.name;
+// 			b = +b.name;
+// 			return a - b;
+// 		});
+
+// 	isFilter = true;
+// 	start = 0;
+// 	end = 12;
+// 	$(".inner-gallery #list-lac-nft").html("");
+// 	filter();
+// }
+
+$('#searchById').keyup(function(event) {
+	$('#searchByLac').val("");
+	initFilter();
+});
+$('#searchByLac').keyup(function(event) {
+	$('#searchById').val("");
+	initFilter();
+});
+
+
+// function initFilterSpecial() {
+
+	
+// 	$('#searchByLac').val("");
+// 	$('#searchById').val("");
+
+// 	if($('#filter-special').is(':checked')) {
+// 		let special = $("#filter-special").val();
+
+// 		filterData = metaData
+// 			.filter(function (item) {
+// 				if (special && item.attributes.Special !== special) {
+// 					return false;
+// 				}
+// 				return true;
+// 			})
+// 			.sort(function (a, b) {
+// 				a = +a.name;
+// 				b = +b.name;
+// 				return a - b;
+// 			});
+
+// 		isFilter = true;
+// 		start = 0;
+// 		end = 12;
+// 		$(".inner-gallery #list-lac-nft").html("");
+// 		filter();
+// 	} else {
+// 		$(".inner-gallery #list-lac-nft").html("");
+// 		isFilter = false;
+// 		start = 0;
+// 		end = 12;
+// 		$(".filter").val("");
+// 		filter();
+// 	}
+	
+// }
+
+
 function initFilter() {
-	let special = $(".filter-special").val();
-	let background = $(".filter-bg").val();
-	let clothes = $(".filter-clothes").val();
-	let earring = $(".filter-earring").val();
-	let necklace = $(".filter-necklace").val();
-	let eyes = $(".filter-eyes").val();
-	let mouth = $(".filter-mouth").val();
-	let glasses = $(".filter-glasses").val();
-	let fur = $(".filter-fur").val();
-	let head = $(".filter-head").val();
-	let id = $("#myInput").val();
+
+	
+	let special = $("#filter-special:checked").val();
+	let background = $("input[name='LacBackground']:checked").val();
+	let clothes = $("input[name='LacClothes']:checked").val();
+	let earring = $("input[name='LacEarring']:checked").val();
+	let necklace = $("input[name='LacNecklace']:checked").val();
+	let eyes = $("input[name='LacEyes']:checked").val();
+	let mouth = $("input[name='LacMouth']:checked").val();
+	let glasses = $("input[name='LacGlasses']:checked").val();
+	let fur = $("input[name='LacFur']:checked").val();
+	let head = $("input[name='LacHair']:checked").val();
+	let id1 = $("#searchById").val();
+	let id2 = $("#searchByLac").val();
 
 	filterData = metaData
 		.filter(function (item) {
-			if (background && item.attributes.Background !== background) {
-				return false;
-			}
 			if (special && item.attributes.Special !== special) {
 				return false;
 			}
@@ -190,9 +269,15 @@ function initFilter() {
 			if (head && item.attributes.Head !== head) {
 				return false;
 			}
-			if (id && item.name !== id) {
+			if (id1 && item.name !== id1) {
 				return false;
 			}
+			if (id2 && item.name !== id2) {
+				return false;
+			}
+			// if (id2 && item.name && item.attributes.Background && item.attributes.Clothes && item.attributes.Earring && item.attributes.Necklace && item.attributes.Eyes && item.attributes.Mouth && item.attributes.Glasses && item.attributes.Fur && item.attributes.Head !== id2) {
+			// 	return false;
+			// }
 			return true;
 		})
 		.sort(function (a, b) {
@@ -204,14 +289,36 @@ function initFilter() {
 	isFilter = true;
 	start = 0;
 	end = 12;
-	$(".gallery .data").html("");
+	$(".inner-gallery #list-lac-nft").html("");
 	filter();
 }
 
-$('#myInput').keyup(function(event) {
-	initFilter();
+// $("#searchById", "#searchByLac").on("input", function () {
+// 	initFilter();
+// });
+
+function handleClick(myRadio) {
+    initFilter();
+	$('#searchById').val("");
+	$('#searchById').val("");
+}
+
+$("#searchById", "#searchByLac").on("submit", function (e) {
+	e.preventDefault();
 });
 
-
-
-
+function resetFilter() {
+	$(".inner-gallery #list-lac-nft").html("");
+	isFilter = false;
+	start = 0;
+	end = 12;
+	$("#searchById").val("");
+	$("#searchByLac").val("");
+	$(".filter").val("");
+	$("input[type=radio]").prop("checked", false);
+	$('#filter-special').prop("checked", false);
+	$('.lac-filter-accordian .accordion + .accordion-content').css({"max-height":"0"});
+	$('.lac-filter-accordian .accordion').removeClass('is-open');
+	filter();
+}
+	

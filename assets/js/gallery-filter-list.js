@@ -188,7 +188,7 @@ var LacFur = [
     "Zombie"
 ];
 
-var LacHead = [
+var LacHair = [
     "Brown Straight Hair",
     "Pink Straight Hair",
     "White Straight Hair",
@@ -234,10 +234,11 @@ for( i = 0; i < LacBackground.length; i++ ) {
     label.htmlFor = 'LacBackground_'+[i]+'';
     label.innerHTML = LacBackground[i];
     input.setAttribute("name","LacBackground");
-    input.type = "checkbox";
+    input.type = "radio";
     input.classList.add('filter-bg')
     input.setAttribute("value", LacBackground[i]);
     input.id = 'LacBackground_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -278,6 +279,7 @@ for( i = 0; i < LacClothes.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacClothes[i]);
     input.id = 'LacClothes_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -298,6 +300,7 @@ for( i = 0; i < LacEarring.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacEarring[i]);
     input.id = 'LacEarring_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -318,6 +321,7 @@ for( i = 0; i < LacNecklace.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacNecklace[i]);
     input.id = 'LacNecklace_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -338,6 +342,7 @@ for( i = 0; i < LacEyes.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacEyes[i]);
     input.id = 'LacEyes_'+[i]+' filter-eyes';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -358,6 +363,7 @@ for( i = 0; i < LacMouth.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value",LacMouth[i]);
     input.id = 'LacMouth_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -378,6 +384,7 @@ for( i = 0; i < LacGlasses.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacGlasses[i]);
     input.id = 'LacGlasses_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -398,6 +405,7 @@ for( i = 0; i < LacFur.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacFur[i]);
     input.id = 'LacFur_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);
@@ -418,6 +426,7 @@ for( i = 0; i < LacHair.length; i++ ) {
     input.type = "radio";
     input.setAttribute("value", LacHair[i]);
     input.id = 'LacHair_'+[i]+'';
+    input.setAttribute("onclick", "handleClick(this)");
 
     div.appendChild(label);
     div.appendChild(input);

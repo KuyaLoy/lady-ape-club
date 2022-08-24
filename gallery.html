@@ -86,26 +86,29 @@
 			<aside class="main-filter">
 				<section>
 					<div class="filter-title">
-						<p>FILTER</p>
-						<span>
-							Reset
+						<p>FILTERS</p>
+						<span class="reset-filter" onclick="resetFilter()">
+							Reset Filter
+							<img src="./assets/images/icons/reset.svg" alt="lac reset filter">
+						</span>
+						<span class="apply-filter" onclick="filterMobilerSlide()">
+							Apply Filter
 							<img src="./assets/images/icons/reset.svg" alt="lac reset filter">
 						</span>
 					</div>
-					<input type="search" class="filter-special" id="myInput" placeholder="By ID">
+					<input type="number" id="searchById" placeholder="By ID">
 
 					<div class="special-checkbox">
 						<label class="switch">
 							Special
-							<input type="checkbox" value="SPECIAL" id="filter-special" />
+							<input type="checkbox" value="SPECIAL" id="filter-special" onclick="handleClick(this)"/>
 							<div class="slider round"></div>
 						</label>
 					</div>
 
 					<div class="lac-filter-accordian">
 
-						<div class="adj-col">
-							<button class="accordion">Background</button>
+						<button class="accordion">Background</button>
 							<div class="accordion-content" id="LacBackground">
 								
 							</div>
@@ -114,10 +117,8 @@
 							<div class="accordion-content" id="LacClothes">
 								
 							</div>
-						</div>
 
 
-						<div class="adj-col">
 							<button class="accordion">Earring</button>
 							<div class="accordion-content" id="LacEarring">
 								
@@ -127,9 +128,7 @@
 							<div class="accordion-content" id="LacNecklace">
 								 
 							</div>
-						</div>
 
-						<div class="adj-col">
 							<button class="accordion">Eyes</button>
 							<div class="accordion-content" id="LacEyes">
 								
@@ -139,9 +138,7 @@
 							<div class="accordion-content" id="LacMouth">
 								
 							</div>
-						</div>
 
-						<div class="adj-col">
 							<button class="accordion">Glasses</button>
 							<div class="accordion-content" id="LacGlasses">
 								
@@ -151,16 +148,13 @@
 							<div class="accordion-content" id="LacFur">
 
 							</div>
-						</div>
-						<div class="adj-col">
 							<button class="accordion">Hair</button>
 							<div class="accordion-content" id="LacHair">
 								
 							</div>
-						</div>
 					</div>
 
-					<button type="button" class="filter-button">FILTER</button>
+					<!-- <button type="button" class="filter-button" onclick="getFilter()">FILTER</button> -->
 
 					<span class="close-menu" onclick="filterMobilerSlide()" style="display: none;">
 						<picture>
@@ -174,7 +168,7 @@
 				<header class="sencodary-filter">
 					<div class="Gallery-title">GALLERY <span>/ 10000</span></div>
 					<div class="filter-inner">
-						<input type="search" placeholder="search">
+						<input type="number" placeholder="search" id="searchByLac">
 						<span>
 							<div class="filter-mobile" onclick="filterMobilerSlide();">filter <picture><img
 										src="./assets/images/icons/sort-down.svg" alt="lac sort"></picture>
@@ -185,7 +179,7 @@
 									<img src="./assets/images/icons/sort-down.svg" alt="lac sort">
 								</picture>
 								<ul>
-									<li>Trending dasd</li>
+									<li>Trending</li>
 									<li>Recently listed</li>
 									<li>Price: low to high</li>
 									<li>Price: high to low</li>

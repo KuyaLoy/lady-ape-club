@@ -3,6 +3,7 @@
 const accordionBtns = document.querySelectorAll(".lac-filter-accordian .accordion");
 accordionBtns.forEach((accordion) => {
   accordion.onclick = function () {
+    
     this.classList.toggle("is-open");
 
     let content = this.nextElementSibling;
@@ -41,8 +42,3 @@ $(window).resize(function() {
     $('.main-filter').removeClass('mobile');
   }
 });
-
-function checkboxhere() {
-  var charrr = $(this).find('input[type=checkbox]').val();
-  alert(charrr);
-}

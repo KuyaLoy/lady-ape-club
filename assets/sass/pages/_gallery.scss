@@ -54,7 +54,7 @@ section.LAC-gallery {
                     }
                 }
 
-                input[type=search] {
+                input[type=number] {
                     margin-top: 30px;
                     width: 100%;
                     font-size: 12px;
@@ -66,6 +66,10 @@ section.LAC-gallery {
                     border-radius: 6px;
                     color: #878787;
                     border: 1px solid #878787;
+
+                    @include u.breakpoint-max(medium) {
+                        display: none;
+                    }
                 }
                 
                 .special-checkbox {
@@ -125,82 +129,80 @@ section.LAC-gallery {
                 .lac-filter-accordian {
                     margin-top: 10px;
 
-                    .adj-col {
-                        button.accordion {
-                            width: 100%;
-                            background: transparent;
-                            border: none;
-                            outline: none;
-                            text-align: left;
-                            padding: 7.5px 0px;
-                            font-size: 16px;
-                            letter-spacing: 1.6px;
-                            color: white;
-                            font-family: "Gilroy-Regular";
-                            cursor: pointer;
-                            transition: background-color 0.2s linear;
-                            position: relative;
+                    button.accordion {
+                        width: 100%;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        text-align: left;
+                        padding: 7.5px 0px;
+                        font-size: 16px;
+                        letter-spacing: 1.6px;
+                        color: white;
+                        font-family: "Gilroy-Regular";
+                        cursor: pointer;
+                        transition: background-color 0.2s linear;
+                        position: relative;
 
+                        &::after {
+                            content: " ";
+                            height: 16px;
+                            width: 16px;
+                            right: 0;
+                            position: absolute;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-image: url(../images/icons/white-arrow-down.svg);
+                        }
+
+                        &.is-open {
                             &::after {
-                                content: " ";
-                                height: 16px;
-                                width: 16px;
-                                right: 0;
-                                position: absolute;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                background-image: url(../images/icons/white-arrow-down.svg);
-                            }
-
-                            &.is-open {
-                                &::after {
-                                    background-image: url(../images/icons/white-arrow-up.svg);
-                                }
-                            }
-
-                            &:hover,
-                            &.is-open {
-                                //font-family: "Gilroy-Bold";
-                                border-bottom: 1px solid #878787;
+                                background-image: url(../images/icons/white-arrow-up.svg);
                             }
                         }
 
-                        .accordion-content {
+                        &:hover,
+                        &.is-open {
+                            //font-family: "Gilroy-Bold";
+                            border-bottom: 1px solid #878787;
+                        }
+                    }
 
-                            padding: 0;
-                            max-height: 0;
-                            overflow: hidden;
-                            transition: max-height 0.2s ease-in-out;
+                    .accordion-content {
 
-                            .lacFilter {
+                        padding: 0;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-in-out;
 
-                                margin: 0px 0px 15px 15px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
+                        .lacFilter {
 
-                                &:first-child {
-                                    padding-top: 15px;
-                                }
+                            margin: 0px 0px 15px 15px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
 
-                                &:last-child {
-                                    padding-bottom: 15px;
-                                }
-
-                                label {
-                                    color: #B2B2B2;
-                                    font-size: 14px;
-                                    font-family: "Gilroy-Regular";
-                                    letter-spacing: 1.4px;
-                                    cursor: pointer;
-                                    line-height: 25px;
-                                    width: 100%;
-                                }
+                            &:first-child {
+                                padding-top: 15px;
                             }
 
-                            
+                            &:last-child {
+                                padding-bottom: 15px;
+                            }
+
+                            label {
+                                color: #B2B2B2;
+                                font-size: 14px;
+                                font-family: "Gilroy-Regular";
+                                letter-spacing: 1.4px;
+                                cursor: pointer;
+                                line-height: 25px;
+                                width: 100%;
+                            }
                         }
+
+                        
                     }
 
                 }
@@ -228,7 +230,7 @@ section.LAC-gallery {
             aside.main-filter.mobile {
                 /* display: flex; */
                 position: absolute;
-                background: #000000b0;
+                background: hsla(0, 0%, 0%, 0.50);
                 backdrop-filter: blur(12px);
                 width: 100%;
                 height: 100%;
@@ -244,9 +246,9 @@ section.LAC-gallery {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    max-height: 90%;
+                    max-height: 80%;
                     overflow: auto;
-
+                    margin-top: -20%;
                     width: 90%;
 
                     .filter-title {
@@ -258,34 +260,63 @@ section.LAC-gallery {
 
                         p {
                             color: #FFD45E;
-                            font-family: 'Gilroy-Bold';
-                            letter-spacing: 1.8px;
+                            font-family: "Gilroy-Bold";
+                            letter-spacing: 2.4px;
+                            font-size: 24px;
                         }
 
                         span {
                             color: #878787;
                             font-size: 14px;
-                            font-family: 'Gilroy-Regular';
+                            font-family: 'Gilroy-Bold';
                             letter-spacing: 1.4px;
                             display: flex;
                             align-items: center;
                             cursor: pointer;
+                            position: absolute;
+                            bottom: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 20px;
+                            text-transform: uppercase;
+                            border-radius: 6px;
+
+                            &.apply-filter {
+                                left: 5%;
+                                color: white;
+                                border: 1px solid white;
+                                width: 42.5%;
+                            }
+                            &.reset-filter {
+                                right: 5%;
+                                background-color: #FFD45E;
+                                color: black;
+                                width: 42.5%;
+                            }
+
 
                             img {
-                                width: 16px;
-                                height: 16px;
-                                object-fit: cover;
+                                display: none;
                             }
                         }
                     }
-
+                    .special-checkbox {
+                        margin-top: 15%;
+                    }
                     .lac-filter-accordian {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        grid-template-rows: 1fr;
-                        grid-column-gap: 20px;
-                        grid-row-gap: 0px;
+                        // display: grid;
+                        // grid-template-columns: repeat(2, 1fr);
+                        // grid-template-rows: 1fr;
+                        // grid-column-gap: 20px;
+                        // grid-row-gap: 0px;
+                        // width: 100%;
                         width: 100%;
+
+                        .accordion {
+                            padding: 20px 0;
+                        }
+                        
                     }
 
                     .close-menu {
@@ -334,7 +365,7 @@ section.LAC-gallery {
                     flex-wrap: wrap;
                     margin-top: 30px;
 
-                    input[type=search] {
+                    input[type=number] {
                         outline: none;
                         border: 1px solid #ACACAC;
                         background: none;
@@ -363,7 +394,8 @@ section.LAC-gallery {
 
                         @include u.breakpoint-max(medium) {
                             display: flex;
-                            justify-content: space-between;
+                            justify-content: center;
+                            gap: 10px;
                         }
 
                         @include u.breakpoint-min(large) {
@@ -376,8 +408,15 @@ section.LAC-gallery {
                             text-align: right;
                             display: flex;
                             align-items: center;
-                            justify-content: flex-end;
+                            justify-content: space-between;
                             align-content: center;
+
+                            @include u.breakpoint-max(medium) {
+                                border: 1px solid #acacac;
+                                padding: 20px;
+                                border-radius: 6px;
+                                width: 100%;
+                            }
 
                             picture {
                                 height: 24px;
@@ -408,7 +447,7 @@ section.LAC-gallery {
                                 overflow: hidden;
                                 display: none;
                                 padding: 20px 0;
-
+                                z-index: 1;
                                 top: 100px;
 
                                 li {
