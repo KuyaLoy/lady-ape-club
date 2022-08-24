@@ -259,7 +259,7 @@ section.LAC-gallery {
         @include u.breakpoint-max(medium) {
             aside.main-filter.mobile {
                 /* display: flex; */
-                position: absolute;
+                position: fixed;
                 background: hsla(0, 0%, 0%, 0.50);
                 backdrop-filter: blur(12px);
                 width: 100%;
@@ -280,6 +280,11 @@ section.LAC-gallery {
                     overflow: auto;
                     margin-top: -20%;
                     width: 90%;
+                    scrollbar-width: none; 
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
 
                     .filter-title {
 
@@ -300,7 +305,7 @@ section.LAC-gallery {
                             font-size: 14px;
                             font-family: 'Gilroy-Bold';
                             letter-spacing: 1.4px;
-                            display: flex;
+                            display: flex !important;
                             align-items: center;
                             cursor: pointer;
                             position: absolute;
@@ -332,7 +337,7 @@ section.LAC-gallery {
                         }
                     }
                     .special-checkbox {
-                        margin-top: 15%;
+                        margin-top: 75px;
                     }
                     .lac-filter-accordian {
                         // display: grid;
