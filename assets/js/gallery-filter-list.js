@@ -234,7 +234,8 @@ for( i = 0; i < LacBackground.length; i++ ) {
     label.htmlFor = 'LacBackground_'+[i]+'';
     label.innerHTML = LacBackground[i];
     input.setAttribute("name","LacBackground");
-    input.type = "radio";
+    input.type = "checkbox";
+    input.classList.add('filter-bg')
     input.setAttribute("value", LacBackground[i]);
     input.id = 'LacBackground_'+[i]+'';
 

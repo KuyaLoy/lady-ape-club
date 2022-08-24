@@ -143,23 +143,23 @@ function filter() {
 }
 
 function initFilter() {
-	let special = $("input[id*='LacBackground_']").val();
-	let background = $("input[id*='LacBackground_']:checked").val();
-	let clothes = $("#filter-clothes:checked").val();
-	let earring = $("#filter-earring:checked").val();
-	let necklace = $("#filter-necklace:checked").val();
-	let eyes = $("#filter-eyes:checked").val();
-	let mouth = $("#filter-mouth:checked").val();
-	let glasses = $("#filter-glasses:checked").val();
-	let fur = $("#filter-fur:checked").val();
-	let head = $("#filter-hair:checked").val();
-	let id = $("#search_form input").val();
+	let special = $(".filter-special").val();
+	let background = $(".filter-bg").val();
+	let clothes = $(".filter-clothes").val();
+	let earring = $(".filter-earring").val();
+	let necklace = $(".filter-necklace").val();
+	let eyes = $(".filter-eyes").val();
+	let mouth = $(".filter-mouth").val();
+	let glasses = $(".filter-glasses").val();
+	let fur = $(".filter-fur").val();
+	let head = $(".filter-head").val();
+	let id = $("#myInput").val();
 
 	filterData = metaData
 		.filter(function (item) {
-			// if (background && item.attributes.Background !== background) {
-			// 	return false;
-			// }
+			if (background && item.attributes.Background !== background) {
+				return false;
+			}
 			if (special && item.attributes.Special !== special) {
 				return false;
 			}
@@ -204,21 +204,13 @@ function initFilter() {
 	isFilter = true;
 	start = 0;
 	end = 12;
-	$("#list-lac-nft").html("");
+	$(".gallery .data").html("");
 	filter();
 }
 
-$(".lacFilter input").on("change", function () {
+$('#myInput').keyup(function(event) {
 	initFilter();
 });
-
-// $(document).ready(function () {
-//     $('.lacFilter input').change(function () {
-//         // The one that fires the event is always the
-//         // checked one; you don't need to test for this
-//         initFilter();
-//     });
-// });
 
 
 
