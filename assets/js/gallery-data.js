@@ -298,9 +298,11 @@ function initFilter() {
 // });
 
 function handleClick(myRadio) {
-    initFilter();
+
+	initFilter();
 	$('#searchById').val("");
 	$('#searchById').val("");
+	
 }
 
 $("#searchById", "#searchByLac").on("submit", function (e) {
