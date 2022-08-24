@@ -37,7 +37,7 @@ fetch(`./assets/json/meta.json`)
 function filter() {
 
 	var meta = isFilter ? filterData : metaData;
-	$(".Gallery-title span").html("/ "+meta.length);
+	$(".Gallery-title .lac-count").html("/ "+meta.length);
 	meta = meta.slice(start, end);
 	//console.log(meta, "here");
 
