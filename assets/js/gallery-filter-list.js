@@ -234,7 +234,7 @@ for( i = 0; i < LacBackground.length; i++ ) {
     label.htmlFor = 'LacBackground_'+[i]+'';
     label.innerHTML = LacBackground[i];
     input.setAttribute("name","LacBackground");
-    input.type = "radio";
+    input.type = "checkbox";
     input.classList.add('filter-bg')
     input.setAttribute("value", LacBackground[i]);
     input.id = 'LacBackground_'+[i]+'';
@@ -256,7 +256,7 @@ for( i = 0; i < LacBackground.length; i++ ) {
 //     label.htmlFor = 'LacBackground_'+LacBackground[i]+'';
 //     label.innerHTML = LacBackground[i];
 //     input.setAttribute("name",LacBackground;
-//     input.type = "radio";
+//     input.type = "checkbox";
 //     input.setAttribute("value", "LacBackground[i];
 //     input.id = 'LacBackground_'+LacBackground[i]+'';
 
@@ -276,7 +276,7 @@ for( i = 0; i < LacClothes.length; i++ ) {
     label.htmlFor = 'LacClothes_'+[i]+'';
     label.innerHTML = LacClothes[i];
     input.setAttribute("name","LacClothes");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacClothes[i]);
     input.id = 'LacClothes_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");
@@ -297,7 +297,7 @@ for( i = 0; i < LacEarring.length; i++ ) {
     label.htmlFor = 'LacEarring_'+[i]+'';
     label.innerHTML = LacEarring[i];
     input.setAttribute("name","LacEarring");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacEarring[i]);
     input.id = 'LacEarring_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");
@@ -318,7 +318,7 @@ for( i = 0; i < LacNecklace.length; i++ ) {
     label.htmlFor = 'LacNecklace_'+[i]+'';
     label.innerHTML = LacNecklace[i];
     input.setAttribute("name","LacNecklace");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacNecklace[i]);
     input.id = 'LacNecklace_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");
@@ -339,7 +339,7 @@ for( i = 0; i < LacEyes.length; i++ ) {
     label.htmlFor = 'LacEyes_'+[i]+'';
     label.innerHTML = LacEyes[i];
     input.setAttribute("name","LacEyes");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacEyes[i]);
     input.id = 'LacEyes_'+[i]+' filter-eyes';
     input.setAttribute("onclick", "handleClick(this)");
@@ -360,7 +360,7 @@ for( i = 0; i < LacMouth.length; i++ ) {
     label.htmlFor = 'LacMouth_'+[i]+'';
     label.innerHTML = LacMouth[i];
     input.setAttribute("name","LacMouth");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value",LacMouth[i]);
     input.id = 'LacMouth_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");
@@ -381,7 +381,7 @@ for( i = 0; i < LacGlasses.length; i++ ) {
     label.htmlFor = 'LacGlasses_'+[i]+'';
     label.innerHTML = LacGlasses[i];
     input.setAttribute("name","LacGlasses");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacGlasses[i]);
     input.id = 'LacGlasses_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");
@@ -402,7 +402,7 @@ for( i = 0; i < LacFur.length; i++ ) {
     label.htmlFor = 'LacFur_'+[i]+'';
     label.innerHTML = LacFur[i];
     input.setAttribute("name","LacFur");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacFur[i]);
     input.id = 'LacFur_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");
@@ -423,7 +423,7 @@ for( i = 0; i < LacHair.length; i++ ) {
     label.htmlFor = 'LacHair_'+[i]+'';
     label.innerHTML = LacHair[i];
     input.setAttribute("name","LacHair");
-    input.type = "radio";
+    input.type = "checkbox";
     input.setAttribute("value", LacHair[i]);
     input.id = 'LacHair_'+[i]+'';
     input.setAttribute("onclick", "handleClick(this)");

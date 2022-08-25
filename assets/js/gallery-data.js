@@ -299,6 +299,11 @@ function initFilter() {
 
 function handleClick(myRadio) {
 
+	if($(myRadio).is(':checked')) {
+		$(myRadio).parents('.accordion-content').find('.lacFilter input[type=checkbox]').prop('checked', false);
+		$(myRadio).prop('checked', true);
+	}
+
 	initFilter();
 	$('#searchById').val("");
 	$('#searchById').val("");
