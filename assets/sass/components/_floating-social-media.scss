@@ -2,6 +2,9 @@
 
 /** icon bar **/
 .extra-button-cont {
+    @include u.breakpoint-max(small) {
+        display: none;
+    }
     .icon-bar {
         position: fixed;
         top: 50%;
@@ -95,3 +98,4 @@
         }
       }
 }
+
