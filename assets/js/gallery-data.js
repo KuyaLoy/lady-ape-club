@@ -50,7 +50,7 @@ function filter() {
 	for (let i = 0; i < meta.length; i++) {
 		var li = document.createElement("li");
 		var a = document.createElement("a");
-		a.setAttribute("href", meta[i].hash);
+		a.setAttribute("href", meta[i].external_url);
     	a.target = "_blank";
 		var myPara1 = document.createElement("p");
 		// console.log(meta[i].attributes)

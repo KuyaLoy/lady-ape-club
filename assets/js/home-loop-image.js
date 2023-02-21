@@ -1,5 +1,5 @@
 // show list of monkey
-var allPics = 39;
+var allPics = 99;
 
 for(i=0;i<=allPics; i++){
   // myImg.src = images[i];
@@ -13,7 +13,7 @@ for(i=0;i<=allPics; i++){
   img.src = './assets/images/lac-nft/'+[i]+'.png';
   picture.appendChild(img);
 
-  if(i > 19) {
+  if(i > 49) {
     document.getElementById('slide-lac-cont-2').appendChild(picture); 
   } else {
     document.getElementById('slide-lac-cont-1').appendChild(picture);

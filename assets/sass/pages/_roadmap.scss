@@ -1,0 +1,283 @@
+@use '../utils' as u;
+
+.roadmap-main-container {
+    margin-top: u.rem(200);
+
+    @include u.breakpoint-max(small) {
+        margin-top: unset;
+    }
+
+    text-transform: uppercase;
+
+    .roadmap-logo-cont {
+        text-align: center;
+        display: block;
+
+        img {
+            max-width: 200px;
+        }
+    }
+
+    .roadmap-container {
+
+        margin-top: u.rem(100);
+        margin-bottom: u.rem(100);
+
+        .roadmap-row {
+
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+
+            
+
+            &::after {
+                content: "";
+                position: absolute;
+                border-right: 1px solid white;
+                border-left: 1px solid white;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 0;
+
+                @include u.breakpoint-max(small) {
+                    all: unset;
+                }
+
+            }
+        }
+
+
+        .roadmap-inner-container {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+
+            .sold-out {
+                width: u.rem(175);
+                height: u.rem(175);
+                background-image: url(../images/road-map/inner-page/sold-out.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: u.rem(-50);
+            }
+
+            &:nth-child(odd) {
+                margin-top: u.rem(-100);
+            }
+
+            &:nth-child(even) {
+                margin-top: u.rem(100);
+            }
+
+            @include u.breakpoint-max(small) {
+                margin-top: 30px !important;
+                width: 100%;
+            }
+
+            p.desc {
+                position: absolute;
+                font-size: u.rem(36);
+                font-family: 'Gilroy-Black';
+                letter-spacing: u.rem(3.2);
+                text-align: center;
+                width: 70%;
+                margin: 0 auto;
+                line-height: u.rem(45);
+                text-shadow: 1px 2px 5px #fff;
+
+                @include u.breakpoint-max(small) {
+                    width: 100%;
+                    font-size: u.rem(32);
+                    letter-spacing: u.rem(3.2);
+                }
+            }
+        }
+    }
+
+    .roadmap-context-cont {
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+
+            picture {
+                display: flex;
+            align-items: center;
+            justify-content: center;
+                width: 50%;
+
+                img {
+                    width: 60%;
+                    @include u.breakpoint-max(medium) {
+                        width: 100%;
+                    }
+                }
+            }
+            p {
+
+                &.cs-soon {
+                    font-size: u.rem(50);
+                    line-height: u.rem(50);
+                }
+                width: 50%;
+                letter-spacing: u.rem(1.8);
+                font-size: u.rem(18);
+                font-family: "Gilroy-Regular";
+                line-height: u.rem(30);
+                text-align: justify;
+                @include u.breakpoint-max(medium) {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 30px;
+
+                    letter-spacing: u.rem(1.4);
+                    font-size: u.rem(14);
+                }
+
+                span {
+                    font-size: u.rem(26);
+                    letter-spacing: u.rem(2.6);
+                    font-family: "Gilroy-Black";
+                }
+                span.apos {
+                    color: #ffd35c;
+                    font-family: "Gilroy-Bold";
+                    letter-spacing: u.rem(1.8);
+                    font-size: u.rem(18);
+                    @include u.breakpoint-max(medium) {
+                        letter-spacing: u.rem(1.4);
+                        font-size: u.rem(14);
+                    }
+                }
+            }
+        }
+        .scroll-diamond {
+            margin-bottom: 100px;
+            color: black;
+            background-image: url(../images/road-map/inner-page/scroll-bg.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 900px;
+            padding: 100px 20px 50px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //background-color: red;
+
+            @media (max-width: 1200px) {
+                background-size: cover;
+                padding: 100px 20px;
+            }
+
+            .content {
+
+                width: 65%;
+
+                @include u.breakpoint-max(medium) {
+                    width: 90%;
+                }
+
+                h4 {
+                    font-size: u.rem(26);
+                    letter-spacing: u.rem(2.6);
+                    font-family: "Gilroy-Black";
+
+                    @include u.breakpoint-max(medium) {
+                        font-size: 28px;  
+                        letter-spacing: 2.8px;
+                    }
+                    @include u.breakpoint-max(small) {
+                        font-size: 26px;  
+                        letter-spacing: 2.6px;
+                    }
+                }
+
+                ol {
+                    list-style-type: decimal;
+                    list-style-position: inside;
+                    padding-left: 0;
+                    margin-top: 20px;
+
+                    li {
+                        margin-bottom: 30px;
+                        letter-spacing: u.rem(1.8);
+                        font-size: u.rem(18);
+                        font-family: "Gilroy-black";
+                        line-height: u.rem(30);
+                        text-align: left;
+
+                        @include u.breakpoint-max(medium) {
+                            font-size: 16px;  
+                            letter-spacing: u.rem(1.6);
+                        }
+                        @include u.breakpoint-max(small) {
+                            font-size: 14px;  
+                            letter-spacing: u.rem(1.4);
+                        }
+                        span {
+                            font-family: "Gilroy-Regular";
+                        }
+
+                        a {
+                            color: #aa6f9b;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+
+            
+            &.cs-soon-scroll{
+                min-height: 500px;
+                background-size: 70% 100%;
+                @include u.breakpoint-max(small) {
+                    background-size: contain;
+                }
+
+                .content {
+                    text-align: center;
+                    h4 {
+                        margin-top: u.rem(-50);
+                        font-size: u.rem(60);
+                        color: #fefbfd;
+                        text-shadow: 0px 0px 10px #cabc70;
+                        animation: glow 1s ease-in-out infinite alternate;
+
+                        @include u.breakpoint-max(small) {
+                            font-size: u.rem(25);
+                            margin-top: u.rem(-25);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes glow {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      text-shadow: 0px 0px 10px #f0edc4;
+      transform: scale(1.2);
+    }
+  }

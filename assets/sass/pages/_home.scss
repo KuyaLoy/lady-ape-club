@@ -166,6 +166,30 @@ main {
                             animation-play-state: paused;
                         }
                     }
+
+                    &#slide-lac-cont-3 {
+                        animation: scrollingRight 10s linear infinite;
+
+                        @include u.breakpoint-min(medium) {
+                            animation: scrollingRight 50s linear infinite;
+                        }
+
+                        &:hover {
+                            animation-play-state: paused;
+                        }
+                        
+                    }
+                    &#slide-lac-cont-4 {
+                        animation: scrollingLeft 10s linear infinite;
+
+                        @include u.breakpoint-min(medium) {
+                            animation: scrollingLeft 50s linear infinite;
+                        }
+                        
+                        &:hover {
+                            animation-play-state: paused;
+                        }
+                    }
                 }
 
             }
@@ -599,6 +623,161 @@ main {
 
         }
     }
+}
+
+.announcements-popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    //background-color: black;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    &__inner {
+        max-width: 800px;
+
+        @media(max-width: 800px) {
+            max-width: 100%;
+        }
+        
+        background-color: hsla(0, 0%, 0%, 0.3);
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(55px);
+        position: relative;
+        flex-wrap: wrap;
+        text-align: center;
+
+        &__content {
+            padding: 75px;
+
+            @media(max-width: 800px) {
+                padding: 170px 20px 50px 20px ;
+            }
+            @media (max-height:670px) and (max-width:400px) {
+                padding: 130px 20px 50px 20px ;
+            }
+            .close {
+                height: 50px;
+                width: 50px;
+                background-image: url(../images/icons/close-popup.png);
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 100%;
+                border: 1px solid transparent;
+
+                @media (max-height:670px) and (max-width:400px) {
+                    height: 25px;
+                width: 25px;
+                }
+            }
+
+            .popup-logo {
+                height: 100px;
+                width: 100px;
+                background-image: url(../images/logo/tnc-art.png);
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                @media(max-width: 800px) {
+                    height: 75px;
+                    width: 75px;
+                }
+            }
+            h2 {
+                font-family: "Gilroy-Black";
+                color: #FFD35C;
+                font-size: 36px;
+
+                @media (max-height:670px) and (max-width:400px) {
+                    font-size: 28px;
+                }
+                
+            }
+            picture {
+                margin-top: 45px;
+                display: block;
+
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                font-size: 28px;
+                line-height: 28px;
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 56px;
+                font-family: "Gilroy-Light";
+                line-height: 36px;
+                letter-spacing:1.7px;
+                span {
+                    font-family: "Gilroy-black";
+                }
+
+                
+
+                @media(max-width: 800px) {
+                    width: 100%;
+
+                    margin-top: 40px;
+                }
+
+                @media (max-height:670px) and (max-width:400px) {
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+            }
+            
+            a {
+                display: block;
+                background-color: #FFD35C;
+                color: #000;
+                font-family: "Gilroy-Black";
+
+                font-size: 26px;
+                text-decoration: none;
+                max-width: 300px;
+                margin: 0 auto;
+                margin-top: 70px;
+                padding: 20px;
+                border-radius: 12px;
+
+                @media (max-height:670px) and (max-width:400px) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    @media (max-height:670px) and (max-width:400px) { 
+        /* CSS rules here */
+        height: 95%;
+        width: 100%;;
+
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
 }
 
 @keyframes scrollingRight {
